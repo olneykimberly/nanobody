@@ -1,0 +1,135 @@
+{
+    "Commment_Input_Output_Directories": "This section specifies the input and output directories for scripts",
+    "rawReads" : "../../fastq/",
+    "rawQC" : "../../rawQC/",
+    "trimmedReads" : "../../trimmedReads/",
+    "mergedReads" : "../../mergedReads/",
+    "trimmedQC" : "../../trimmedQC/",
+    "trimmedMergedQC" : "../../trimmedMergedQC/",
+    "clustalo" : "../../clustalo/",
+    "vsearch" : "../../vsearch/",
+    "aligned" : "../../aligned/",
+    "bamstats" : "../../bamstats/",
+
+    "Comment_Reference" : "This section specifies the location of the reference genome",
+
+    "Comment_Sample_Info": "The following section lists the samples that are to be analyzed",
+    "sample_names": ['nAB_Abeta1', 'nAB_Abeta2', 'nAB_Abeta3', 'nAB_Abeta4', 'nAB_ApoE1', 'nAB_ApoE2', 'nAB_ApoE3', 'nAB_Clu1', 'nAB_Clu2'],
+
+    "nAB_Abeta1":{
+        "fq_path": "../../fastq/",
+        "fq1": "nAB_Abeta1_1_CL_Whole_C1_WMGAS_A43777_SC2134209-SC3_AGAGTATCAG_L001_R1_001",
+        "fq2": "nAB_Abeta1_1_CL_Whole_C1_WMGAS_A43777_SC2134209-SC3_AGAGTATCAG_L001_R2_001",
+        "fq_R1": "nAB_Abeta1_R1",
+        "fq_R2": "nAB_Abeta1_R2",
+        "ID": "nAB_Abeta1",
+        "SM": "nAB_Abeta1",
+        "PU": "BXA23222-3019.1",
+        "LB": "nAB_Abeta1",
+        "PL": "Illumina"
+        },
+
+    "nAB_Abeta2":{
+        "fq_path": "../../fastq/",
+        "fq1": "nAB_Abeta2_1_CL_Whole_C1_WMGAS_A43778_SC2134209-SC3_CTGGCGTATG_L001_R1_001",
+        "fq2": "nAB_Abeta2_1_CL_Whole_C1_WMGAS_A43778_SC2134209-SC3_CTGGCGTATG_L001_R2_001",
+        "fq_R1": "nAB_Abeta2_R1",
+        "fq_R2": "nAB_Abeta2_R2",
+        "ID": "nAB_Abeta2",
+        "SM": "nAB_Abeta2",
+        "PU": "BXA23222-3019.1",
+        "LB": "nAB_Abeta2",
+        "PL": "Illumina"
+        },
+
+    "nAB_Abeta3":{
+        "fq_path": "../../fastq/",
+        "fq1": "nAB_Abeta3_1_CL_Whole_C1_WMGAS_A43779_SC2134209-SC3_GGTCATCTCG_L001_R1_001",
+        "fq2": "nAB_Abeta3_1_CL_Whole_C1_WMGAS_A43779_SC2134209-SC3_GGTCATCTCG_L001_R2_001",
+        "fq_R1": "nAB_Abeta3_R1",
+        "fq_R2": "nAB_Abeta3_R2",
+        "ID": "nAB_Abeta3",
+        "SM": "nAB_Abeta3",
+        "PU": "BXA23222-3019.1",
+        "LB": "nAB_Abeta3",
+        "PL": "Illumina"
+        },
+
+    "nAB_Abeta4":{
+        "fq_path": "../../fastq/",
+        "fq1": "nAB_Abeta4_1_CL_Whole_C1_WMGAS_A43780_SC2134209-SC3_TGTCGAACAA_L001_R1_001",
+        "fq2": "nAB_Abeta4_1_CL_Whole_C1_WMGAS_A43780_SC2134209-SC3_TGTCGAACAA_L001_R2_001",
+        "fq_R1": "nAB_Abeta4_R1",
+        "fq_R2": "nAB_Abeta4_R2",
+        "ID": "nAB_Abeta4",
+        "SM": "nAB_Abeta4",
+        "PU": "BXA23222-3019.1",
+        "LB": "nAB_Abeta4",
+        "PL": "Illumina"
+        },
+
+    "nAB_ApoE1":{
+        "fq_path": "../../fastq/",
+        "fq1": "nAB_ApoE1_1_CL_Whole_C1_WMGAS_A43783_SC2134209-SC3_CGCTAAGGCT_L001_R1_001",
+        "fq2": "nAB_ApoE1_1_CL_Whole_C1_WMGAS_A43783_SC2134209-SC3_CGCTAAGGCT_L001_R2_001",
+        "fq_R1": "nAB_ApoE1_R1",
+        "fq_R2": "nAB_ApoE1_R2",
+        "ID": "nAB_ApoE1",
+        "SM": "nAB_ApoE1",
+        "PU": "BXA23222-3019.1",
+        "LB": "nAB_ApoE1",
+        "PL": "Illumina"
+        },
+
+    "nAB_ApoE2":{
+        "fq_path": "../../fastq/",
+        "fq1": "nAB_ApoE2_1_CL_Whole_C1_WMGAS_A43784_SC2134209-SC3_AATCACGACC_L001_R1_001",
+        "fq2": "nAB_ApoE2_1_CL_Whole_C1_WMGAS_A43784_SC2134209-SC3_AATCACGACC_L001_R2_001",
+        "fq_R1": "nAB_ApoE2_R1",
+        "fq_R2": "nAB_ApoE2_R2",
+        "ID": "nAB_ApoE2",
+        "SM": "nAB_ApoE2",
+        "PU": "BXA23222-3019.1",
+        "LB": "nAB_ApoE2",
+        "PL": "Illumina"
+        },
+
+    "nAB_ApoE3":{
+        "fq_path": "../../fastq/",
+        "fq1": "nAB_ApoE3_1_CL_Whole_C1_WMGAS_A43785_SC2134209-SC3_GTAGCTGTCG_L001_R1_001",
+        "fq2": "nAB_ApoE3_1_CL_Whole_C1_WMGAS_A43785_SC2134209-SC3_GTAGCTGTCG_L001_R2_001",
+        "fq_R1": "nAB_ApoE3_R1",
+        "fq_R2": "nAB_ApoE3_R2",
+        "ID": "nAB_ApoE3",
+        "SM": "nAB_ApoE3",
+        "PU": "BXA23222-3019.1",
+        "LB": "nAB_ApoE3",
+        "PL": "Illumina"
+        },
+
+    "nAB_Clu1":{
+        "fq_path": "../../fastq/",
+        "fq1": "nAB_Clu1_1_CL_Whole_C1_WMGAS_A43781_SC2134209-SC3_GTGGCACGAA_L001_R1_001",
+        "fq2": "nAB_Clu1_1_CL_Whole_C1_WMGAS_A43781_SC2134209-SC3_GTGGCACGAA_L001_R2_001",
+        "fq_R1": "nAB_Clu1_R1",
+        "fq_R2": "nAB_Clu1_R2",
+        "ID": "nAB_Clu1",
+        "SM": "nAB_Clu1",
+        "PU": "BXA23222-3019.1",
+        "LB": "nAB_Clu1",
+        "PL": "Illumina"
+        },
+
+    "nAB_Clu2":{
+        "fq_path": "../../fastq/",
+        "fq1": "nAB_Clu2_1_CL_Whole_C1_WMGAS_A43782_SC2134209-SC3_AAGCCTTAGA_L001_R1_001",
+        "fq2": "nAB_Clu2_1_CL_Whole_C1_WMGAS_A43782_SC2134209-SC3_AAGCCTTAGA_L001_R2_001",
+        "fq_R1": "nAB_Clu2_R1",
+        "fq_R2": "nAB_Clu2_R2",
+        "ID": "nAB_Clu2",
+        "SM": "nAB_Clu2",
+        "PU": "BXA23222-3019.1",
+        "LB": "nAB_Clu2",
+        "PL": "Illumina"
+        }
+}

@@ -1,0 +1,116 @@
+host: g-c-1-4-15
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided remote nodes: 1
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 24 14:00:25 2025]
+rule raw_fastqc:
+    input: ../../fastq/nAB_Clu2_1_CL_Whole_C1_WMGAS_A43782_SC2134209-SC3_AAGCCTTAGA_L001_R1_001.fastq.gz, ../../fastq/nAB_Clu2_1_CL_Whole_C1_WMGAS_A43782_SC2134209-SC3_AAGCCTTAGA_L001_R2_001.fastq.gz
+    output: ../../rawQC/nAB_Clu2_fq1_fastqc.zip, ../../rawQC/nAB_Clu2_fq1_fastqc.html, ../../rawQC/nAB_Clu2_fq2_fastqc.zip, ../../rawQC/nAB_Clu2_fq2_fastqc.html
+    jobid: 0
+    reason: Forced execution
+    wildcards: sample=nAB_Clu2
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=1000, disk_mib=954, tmpdir=<TBD>, ntasks=1, threads=8, runtime=45, cpus_per_task=8, mem_gb=64, walltime=01:30:00
+host: g-c-1-4-15
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 8
+Rules claiming more threads will be scaled down.
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 24 14:00:26 2025]
+localrule raw_fastqc:
+    input: ../../fastq/nAB_Clu2_1_CL_Whole_C1_WMGAS_A43782_SC2134209-SC3_AAGCCTTAGA_L001_R1_001.fastq.gz, ../../fastq/nAB_Clu2_1_CL_Whole_C1_WMGAS_A43782_SC2134209-SC3_AAGCCTTAGA_L001_R2_001.fastq.gz
+    output: ../../rawQC/nAB_Clu2_fq1_fastqc.zip, ../../rawQC/nAB_Clu2_fq1_fastqc.html, ../../rawQC/nAB_Clu2_fq2_fastqc.zip, ../../rawQC/nAB_Clu2_fq2_fastqc.html
+    jobid: 0
+    reason: Forced execution
+    wildcards: sample=nAB_Clu2
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=1000, disk_mib=954, tmpdir=/tmp, ntasks=1, threads=8, runtime=45, cpus_per_task=8, mem_gb=64, walltime=01:30:00
+/usr/bin/bash: line 1: fastqc: command not found
+RuleException:
+CalledProcessError in file "/tgen_labs/jfryer/kolney/nanobody/scripts/01_processing/Snakefile", line 44:
+Command 'set -euo pipefail;  
+		fastqc ../../fastq/nAB_Clu2_1_CL_Whole_C1_WMGAS_A43782_SC2134209-SC3_AAGCCTTAGA_L001_R1_001.fastq.gz;
+		fastqc ../../fastq/nAB_Clu2_1_CL_Whole_C1_WMGAS_A43782_SC2134209-SC3_AAGCCTTAGA_L001_R2_001.fastq.gz;
+		mv ../../fastq/nAB_Clu2_1_CL_Whole_C1_WMGAS_A43782_SC2134209-SC3_AAGCCTTAGA_L001_R1_001_fastqc.html ../../rawQC/nAB_Clu2_fq1_fastqc.html;
+		mv ../../fastq/nAB_Clu2_1_CL_Whole_C1_WMGAS_A43782_SC2134209-SC3_AAGCCTTAGA_L001_R1_001_fastqc.zip ../../rawQC/nAB_Clu2_fq1_fastqc.zip;
+		mv ../../fastq/nAB_Clu2_1_CL_Whole_C1_WMGAS_A43782_SC2134209-SC3_AAGCCTTAGA_L001_R2_001_fastqc.html ../../rawQC/nAB_Clu2_fq2_fastqc.html;
+		mv ../../fastq/nAB_Clu2_1_CL_Whole_C1_WMGAS_A43782_SC2134209-SC3_AAGCCTTAGA_L001_R2_001_fastqc.zip ../../rawQC/nAB_Clu2_fq2_fastqc.zip' returned non-zero exit status 127.
+[Wed Sep 24 14:00:26 2025]
+Error in rule raw_fastqc:
+    message: None
+    jobid: 0
+    input: ../../fastq/nAB_Clu2_1_CL_Whole_C1_WMGAS_A43782_SC2134209-SC3_AAGCCTTAGA_L001_R1_001.fastq.gz, ../../fastq/nAB_Clu2_1_CL_Whole_C1_WMGAS_A43782_SC2134209-SC3_AAGCCTTAGA_L001_R2_001.fastq.gz
+    output: ../../rawQC/nAB_Clu2_fq1_fastqc.zip, ../../rawQC/nAB_Clu2_fq1_fastqc.html, ../../rawQC/nAB_Clu2_fq2_fastqc.zip, ../../rawQC/nAB_Clu2_fq2_fastqc.html
+    shell:
+        
+		fastqc ../../fastq/nAB_Clu2_1_CL_Whole_C1_WMGAS_A43782_SC2134209-SC3_AAGCCTTAGA_L001_R1_001.fastq.gz;
+		fastqc ../../fastq/nAB_Clu2_1_CL_Whole_C1_WMGAS_A43782_SC2134209-SC3_AAGCCTTAGA_L001_R2_001.fastq.gz;
+		mv ../../fastq/nAB_Clu2_1_CL_Whole_C1_WMGAS_A43782_SC2134209-SC3_AAGCCTTAGA_L001_R1_001_fastqc.html ../../rawQC/nAB_Clu2_fq1_fastqc.html;
+		mv ../../fastq/nAB_Clu2_1_CL_Whole_C1_WMGAS_A43782_SC2134209-SC3_AAGCCTTAGA_L001_R1_001_fastqc.zip ../../rawQC/nAB_Clu2_fq1_fastqc.zip;
+		mv ../../fastq/nAB_Clu2_1_CL_Whole_C1_WMGAS_A43782_SC2134209-SC3_AAGCCTTAGA_L001_R2_001_fastqc.html ../../rawQC/nAB_Clu2_fq2_fastqc.html;
+		mv ../../fastq/nAB_Clu2_1_CL_Whole_C1_WMGAS_A43782_SC2134209-SC3_AAGCCTTAGA_L001_R2_001_fastqc.zip ../../rawQC/nAB_Clu2_fq2_fastqc.zip
+		
+        (command exited with non-zero exit code)
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look below for error messages
+[Wed Sep 24 14:00:26 2025]
+Error in rule raw_fastqc:
+    message: None
+    jobid: 0
+    input: ../../fastq/nAB_Clu2_1_CL_Whole_C1_WMGAS_A43782_SC2134209-SC3_AAGCCTTAGA_L001_R1_001.fastq.gz, ../../fastq/nAB_Clu2_1_CL_Whole_C1_WMGAS_A43782_SC2134209-SC3_AAGCCTTAGA_L001_R2_001.fastq.gz
+    output: ../../rawQC/nAB_Clu2_fq1_fastqc.zip, ../../rawQC/nAB_Clu2_fq1_fastqc.html, ../../rawQC/nAB_Clu2_fq2_fastqc.zip, ../../rawQC/nAB_Clu2_fq2_fastqc.html
+    shell:
+        
+		fastqc ../../fastq/nAB_Clu2_1_CL_Whole_C1_WMGAS_A43782_SC2134209-SC3_AAGCCTTAGA_L001_R1_001.fastq.gz;
+		fastqc ../../fastq/nAB_Clu2_1_CL_Whole_C1_WMGAS_A43782_SC2134209-SC3_AAGCCTTAGA_L001_R2_001.fastq.gz;
+		mv ../../fastq/nAB_Clu2_1_CL_Whole_C1_WMGAS_A43782_SC2134209-SC3_AAGCCTTAGA_L001_R1_001_fastqc.html ../../rawQC/nAB_Clu2_fq1_fastqc.html;
+		mv ../../fastq/nAB_Clu2_1_CL_Whole_C1_WMGAS_A43782_SC2134209-SC3_AAGCCTTAGA_L001_R1_001_fastqc.zip ../../rawQC/nAB_Clu2_fq1_fastqc.zip;
+		mv ../../fastq/nAB_Clu2_1_CL_Whole_C1_WMGAS_A43782_SC2134209-SC3_AAGCCTTAGA_L001_R2_001_fastqc.html ../../rawQC/nAB_Clu2_fq2_fastqc.html;
+		mv ../../fastq/nAB_Clu2_1_CL_Whole_C1_WMGAS_A43782_SC2134209-SC3_AAGCCTTAGA_L001_R2_001_fastqc.zip ../../rawQC/nAB_Clu2_fq2_fastqc.zip
+		
+        (command exited with non-zero exit code)
+Storing output in storage.
+WorkflowError:
+At least one job did not complete successfully.
+srun: error: g-c-1-4-15: task 0: Exited with exit code 1
+[Wed Sep 24 14:00:28 2025]
+Error in rule raw_fastqc:
+    message: None
+    jobid: 0
+    input: ../../fastq/nAB_Clu2_1_CL_Whole_C1_WMGAS_A43782_SC2134209-SC3_AAGCCTTAGA_L001_R1_001.fastq.gz, ../../fastq/nAB_Clu2_1_CL_Whole_C1_WMGAS_A43782_SC2134209-SC3_AAGCCTTAGA_L001_R2_001.fastq.gz
+    output: ../../rawQC/nAB_Clu2_fq1_fastqc.zip, ../../rawQC/nAB_Clu2_fq1_fastqc.html, ../../rawQC/nAB_Clu2_fq2_fastqc.zip, ../../rawQC/nAB_Clu2_fq2_fastqc.html
+    shell:
+        
+		fastqc ../../fastq/nAB_Clu2_1_CL_Whole_C1_WMGAS_A43782_SC2134209-SC3_AAGCCTTAGA_L001_R1_001.fastq.gz;
+		fastqc ../../fastq/nAB_Clu2_1_CL_Whole_C1_WMGAS_A43782_SC2134209-SC3_AAGCCTTAGA_L001_R2_001.fastq.gz;
+		mv ../../fastq/nAB_Clu2_1_CL_Whole_C1_WMGAS_A43782_SC2134209-SC3_AAGCCTTAGA_L001_R1_001_fastqc.html ../../rawQC/nAB_Clu2_fq1_fastqc.html;
+		mv ../../fastq/nAB_Clu2_1_CL_Whole_C1_WMGAS_A43782_SC2134209-SC3_AAGCCTTAGA_L001_R1_001_fastqc.zip ../../rawQC/nAB_Clu2_fq1_fastqc.zip;
+		mv ../../fastq/nAB_Clu2_1_CL_Whole_C1_WMGAS_A43782_SC2134209-SC3_AAGCCTTAGA_L001_R2_001_fastqc.html ../../rawQC/nAB_Clu2_fq2_fastqc.html;
+		mv ../../fastq/nAB_Clu2_1_CL_Whole_C1_WMGAS_A43782_SC2134209-SC3_AAGCCTTAGA_L001_R2_001_fastqc.zip ../../rawQC/nAB_Clu2_fq2_fastqc.zip
+		
+        (command exited with non-zero exit code)
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look below for error messages
+[Wed Sep 24 14:00:28 2025]
+Error in rule raw_fastqc:
+    message: None
+    jobid: 0
+    input: ../../fastq/nAB_Clu2_1_CL_Whole_C1_WMGAS_A43782_SC2134209-SC3_AAGCCTTAGA_L001_R1_001.fastq.gz, ../../fastq/nAB_Clu2_1_CL_Whole_C1_WMGAS_A43782_SC2134209-SC3_AAGCCTTAGA_L001_R2_001.fastq.gz
+    output: ../../rawQC/nAB_Clu2_fq1_fastqc.zip, ../../rawQC/nAB_Clu2_fq1_fastqc.html, ../../rawQC/nAB_Clu2_fq2_fastqc.zip, ../../rawQC/nAB_Clu2_fq2_fastqc.html
+    shell:
+        
+		fastqc ../../fastq/nAB_Clu2_1_CL_Whole_C1_WMGAS_A43782_SC2134209-SC3_AAGCCTTAGA_L001_R1_001.fastq.gz;
+		fastqc ../../fastq/nAB_Clu2_1_CL_Whole_C1_WMGAS_A43782_SC2134209-SC3_AAGCCTTAGA_L001_R2_001.fastq.gz;
+		mv ../../fastq/nAB_Clu2_1_CL_Whole_C1_WMGAS_A43782_SC2134209-SC3_AAGCCTTAGA_L001_R1_001_fastqc.html ../../rawQC/nAB_Clu2_fq1_fastqc.html;
+		mv ../../fastq/nAB_Clu2_1_CL_Whole_C1_WMGAS_A43782_SC2134209-SC3_AAGCCTTAGA_L001_R1_001_fastqc.zip ../../rawQC/nAB_Clu2_fq1_fastqc.zip;
+		mv ../../fastq/nAB_Clu2_1_CL_Whole_C1_WMGAS_A43782_SC2134209-SC3_AAGCCTTAGA_L001_R2_001_fastqc.html ../../rawQC/nAB_Clu2_fq2_fastqc.html;
+		mv ../../fastq/nAB_Clu2_1_CL_Whole_C1_WMGAS_A43782_SC2134209-SC3_AAGCCTTAGA_L001_R2_001_fastqc.zip ../../rawQC/nAB_Clu2_fq2_fastqc.zip
+		
+        (command exited with non-zero exit code)
+Storing output in storage.
+WorkflowError:
+At least one job did not complete successfully.

@@ -1,0 +1,344 @@
+host: g-c-1-4-13
+Building DAG of jobs...
+You are running snakemake in a SLURM job context. This is not recommended, as it may lead to unexpected behavior. Please run Snakemake directly on the login node.
+SLURM run ID: a44de7fc-1fc3-4651-b829-7d7b675a4058
+Using shell: /usr/bin/bash
+Provided remote nodes: 9
+Job stats:
+job                 count
+----------------  -------
+all                     1
+cluster_size            9
+convert_to_fasta        7
+derep_fulllength        9
+total                  26
+
+Select jobs to execute...
+Failed to solve scheduling problem with ILP solver, falling back to greedy scheduler. You likely have to fix your ILP solver installation. Error message: PULP_CBC_CMD: Not Available (check permissions on cbc)
+Execute 9 jobs...
+[Tue Sep 30 15:47:28 2025]
+rule convert_to_fasta:
+    input: ../../mergedReads/nAB_ApoE2_merged.fastq
+    output: ../../mergedReads/nAB_ApoE2_merged.fasta
+    jobid: 42
+    reason: Missing output files: ../../mergedReads/nAB_ApoE2_merged.fasta
+    wildcards: sample=nAB_ApoE2
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=4339, disk_mib=4138, tmpdir=<TBD>, ntasks=1, threads=1, runtime=20, cpus_per_task=8
+No SLURM account given, trying to guess.
+Unable to guess SLURM account. Trying to proceed without.
+Job 42 has been submitted with SLURM jobid 26219361 (log: /tgen_labs/jfryer/kolney/nanobody/scripts/01_processing/.snakemake/slurm_logs/rule_convert_to_fasta/nAB_ApoE2/26219361.log).
+[Tue Sep 30 15:47:28 2025]
+rule convert_to_fasta:
+    input: ../../mergedReads/nAB_Clu1_merged.fastq
+    output: ../../mergedReads/nAB_Clu1_merged.fasta
+    jobid: 44
+    reason: Missing output files: ../../mergedReads/nAB_Clu1_merged.fasta
+    wildcards: sample=nAB_Clu1
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=4061, disk_mib=3873, tmpdir=<TBD>, ntasks=1, threads=1, runtime=20, cpus_per_task=8
+Job 44 has been submitted with SLURM jobid 26219363 (log: /tgen_labs/jfryer/kolney/nanobody/scripts/01_processing/.snakemake/slurm_logs/rule_convert_to_fasta/nAB_Clu1/26219363.log).
+[Tue Sep 30 15:47:28 2025]
+rule derep_fulllength:
+    input: ../../mergedReads/nAB_Abeta1_merged.fasta
+    output: ../../vsearch/nAB_Abeta1_derep.fasta
+    jobid: 46
+    reason: Missing output files: ../../vsearch/nAB_Abeta1_derep.fasta
+    wildcards: sample=nAB_Abeta1
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=2364, disk_mib=2255, tmpdir=<TBD>, ntasks=1, threads=1, runtime=20, cpus_per_task=8
+Job 46 has been submitted with SLURM jobid 26219364 (log: /tgen_labs/jfryer/kolney/nanobody/scripts/01_processing/.snakemake/slurm_logs/rule_derep_fulllength/nAB_Abeta1/26219364.log).
+[Tue Sep 30 15:47:28 2025]
+rule convert_to_fasta:
+    input: ../../mergedReads/nAB_Abeta3_merged.fastq
+    output: ../../mergedReads/nAB_Abeta3_merged.fasta
+    jobid: 39
+    reason: Missing output files: ../../mergedReads/nAB_Abeta3_merged.fasta
+    wildcards: sample=nAB_Abeta3
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=3773, disk_mib=3599, tmpdir=<TBD>, ntasks=1, threads=1, runtime=20, cpus_per_task=8
+Job 39 has been submitted with SLURM jobid 26219365 (log: /tgen_labs/jfryer/kolney/nanobody/scripts/01_processing/.snakemake/slurm_logs/rule_convert_to_fasta/nAB_Abeta3/26219365.log).
+[Tue Sep 30 15:47:28 2025]
+rule convert_to_fasta:
+    input: ../../mergedReads/nAB_ApoE1_merged.fastq
+    output: ../../mergedReads/nAB_ApoE1_merged.fasta
+    jobid: 41
+    reason: Missing output files: ../../mergedReads/nAB_ApoE1_merged.fasta
+    wildcards: sample=nAB_ApoE1
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=4310, disk_mib=4111, tmpdir=<TBD>, ntasks=1, threads=1, runtime=20, cpus_per_task=8
+Job 41 has been submitted with SLURM jobid 26219366 (log: /tgen_labs/jfryer/kolney/nanobody/scripts/01_processing/.snakemake/slurm_logs/rule_convert_to_fasta/nAB_ApoE1/26219366.log).
+[Tue Sep 30 15:47:28 2025]
+rule convert_to_fasta:
+    input: ../../mergedReads/nAB_ApoE3_merged.fastq
+    output: ../../mergedReads/nAB_ApoE3_merged.fasta
+    jobid: 43
+    reason: Missing output files: ../../mergedReads/nAB_ApoE3_merged.fasta
+    wildcards: sample=nAB_ApoE3
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=4271, disk_mib=4074, tmpdir=<TBD>, ntasks=1, threads=1, runtime=20, cpus_per_task=8
+Job 43 has been submitted with SLURM jobid 26219367 (log: /tgen_labs/jfryer/kolney/nanobody/scripts/01_processing/.snakemake/slurm_logs/rule_convert_to_fasta/nAB_ApoE3/26219367.log).
+[Tue Sep 30 15:47:28 2025]
+rule convert_to_fasta:
+    input: ../../mergedReads/nAB_Clu2_merged.fastq
+    output: ../../mergedReads/nAB_Clu2_merged.fasta
+    jobid: 45
+    reason: Missing output files: ../../mergedReads/nAB_Clu2_merged.fasta
+    wildcards: sample=nAB_Clu2
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=4443, disk_mib=4238, tmpdir=<TBD>, ntasks=1, threads=1, runtime=20, cpus_per_task=8
+Job 45 has been submitted with SLURM jobid 26219368 (log: /tgen_labs/jfryer/kolney/nanobody/scripts/01_processing/.snakemake/slurm_logs/rule_convert_to_fasta/nAB_Clu2/26219368.log).
+[Tue Sep 30 15:47:29 2025]
+rule derep_fulllength:
+    input: ../../mergedReads/nAB_Abeta4_merged.fasta
+    output: ../../vsearch/nAB_Abeta4_derep.fasta
+    jobid: 49
+    reason: Missing output files: ../../vsearch/nAB_Abeta4_derep.fasta
+    wildcards: sample=nAB_Abeta4
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=2418, disk_mib=2306, tmpdir=<TBD>, ntasks=1, threads=1, runtime=20, cpus_per_task=8
+Job 49 has been submitted with SLURM jobid 26219369 (log: /tgen_labs/jfryer/kolney/nanobody/scripts/01_processing/.snakemake/slurm_logs/rule_derep_fulllength/nAB_Abeta4/26219369.log).
+[Tue Sep 30 15:47:29 2025]
+rule convert_to_fasta:
+    input: ../../mergedReads/nAB_Abeta2_merged.fastq
+    output: ../../mergedReads/nAB_Abeta2_merged.fasta
+    jobid: 38
+    reason: Missing output files: ../../mergedReads/nAB_Abeta2_merged.fasta
+    wildcards: sample=nAB_Abeta2
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=4684, disk_mib=4468, tmpdir=<TBD>, ntasks=1, threads=1, runtime=20, cpus_per_task=8
+Job 38 has been submitted with SLURM jobid 26219370 (log: /tgen_labs/jfryer/kolney/nanobody/scripts/01_processing/.snakemake/slurm_logs/rule_convert_to_fasta/nAB_Abeta2/26219370.log).
+[Tue Sep 30 15:48:03 2025]
+Finished jobid: 42 (Rule: convert_to_fasta)
+1 of 26 steps (4%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Tue Sep 30 15:48:03 2025]
+rule derep_fulllength:
+    input: ../../mergedReads/nAB_ApoE2_merged.fasta
+    output: ../../vsearch/nAB_ApoE2_derep.fasta
+    jobid: 51
+    reason: Missing output files: ../../vsearch/nAB_ApoE2_derep.fasta; Input files updated by another job: ../../mergedReads/nAB_ApoE2_merged.fasta
+    wildcards: sample=nAB_ApoE2
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=2317, disk_mib=2210, tmpdir=<TBD>, ntasks=1, threads=1, runtime=20, cpus_per_task=8
+Job 51 has been submitted with SLURM jobid 26219416 (log: /tgen_labs/jfryer/kolney/nanobody/scripts/01_processing/.snakemake/slurm_logs/rule_derep_fulllength/nAB_ApoE2/26219416.log).
+[Tue Sep 30 15:48:03 2025]
+Finished jobid: 46 (Rule: derep_fulllength)
+2 of 26 steps (8%) done
+[Tue Sep 30 15:48:03 2025]
+Finished jobid: 39 (Rule: convert_to_fasta)
+3 of 26 steps (12%) done
+[Tue Sep 30 15:48:03 2025]
+Finished jobid: 41 (Rule: convert_to_fasta)
+4 of 26 steps (15%) done
+[Tue Sep 30 15:48:03 2025]
+Finished jobid: 43 (Rule: convert_to_fasta)
+5 of 26 steps (19%) done
+Select jobs to execute...
+Execute 4 jobs...
+[Tue Sep 30 15:48:03 2025]
+rule derep_fulllength:
+    input: ../../mergedReads/nAB_ApoE1_merged.fasta
+    output: ../../vsearch/nAB_ApoE1_derep.fasta
+    jobid: 50
+    reason: Missing output files: ../../vsearch/nAB_ApoE1_derep.fasta; Input files updated by another job: ../../mergedReads/nAB_ApoE1_merged.fasta
+    wildcards: sample=nAB_ApoE1
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=2302, disk_mib=2196, tmpdir=<TBD>, ntasks=1, threads=1, runtime=20, cpus_per_task=8
+Job 50 has been submitted with SLURM jobid 26219417 (log: /tgen_labs/jfryer/kolney/nanobody/scripts/01_processing/.snakemake/slurm_logs/rule_derep_fulllength/nAB_ApoE1/26219417.log).
+[Tue Sep 30 15:48:03 2025]
+rule derep_fulllength:
+    input: ../../mergedReads/nAB_ApoE3_merged.fasta
+    output: ../../vsearch/nAB_ApoE3_derep.fasta
+    jobid: 52
+    reason: Missing output files: ../../vsearch/nAB_ApoE3_derep.fasta; Input files updated by another job: ../../mergedReads/nAB_ApoE3_merged.fasta
+    wildcards: sample=nAB_ApoE3
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=2281, disk_mib=2176, tmpdir=<TBD>, ntasks=1, threads=1, runtime=20, cpus_per_task=8
+Job 52 has been submitted with SLURM jobid 26219418 (log: /tgen_labs/jfryer/kolney/nanobody/scripts/01_processing/.snakemake/slurm_logs/rule_derep_fulllength/nAB_ApoE3/26219418.log).
+[Tue Sep 30 15:48:03 2025]
+rule cluster_size:
+    input: ../../vsearch/nAB_Abeta1_derep.fasta
+    output: ../../vsearch/nAB_Abeta1_centroids.fasta, ../../vsearch/nAB_Abeta1_clusters.uc
+    jobid: 55
+    reason: Missing output files: ../../vsearch/nAB_Abeta1_clusters.uc; Input files updated by another job: ../../vsearch/nAB_Abeta1_derep.fasta
+    wildcards: sample=nAB_Abeta1
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=2068, disk_mib=1973, tmpdir=<TBD>, ntasks=1, threads=1, runtime=20, cpus_per_task=8
+Job 55 has been submitted with SLURM jobid 26219419 (log: /tgen_labs/jfryer/kolney/nanobody/scripts/01_processing/.snakemake/slurm_logs/rule_cluster_size/nAB_Abeta1/26219419.log).
+[Tue Sep 30 15:48:03 2025]
+rule derep_fulllength:
+    input: ../../mergedReads/nAB_Abeta3_merged.fasta
+    output: ../../vsearch/nAB_Abeta3_derep.fasta
+    jobid: 48
+    reason: Missing output files: ../../vsearch/nAB_Abeta3_derep.fasta; Input files updated by another job: ../../mergedReads/nAB_Abeta3_merged.fasta
+    wildcards: sample=nAB_Abeta3
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=2015, disk_mib=1922, tmpdir=<TBD>, ntasks=1, threads=1, runtime=20, cpus_per_task=8
+Job 48 has been submitted with SLURM jobid 26219420 (log: /tgen_labs/jfryer/kolney/nanobody/scripts/01_processing/.snakemake/slurm_logs/rule_derep_fulllength/nAB_Abeta3/26219420.log).
+[Tue Sep 30 15:48:43 2025]
+Finished jobid: 44 (Rule: convert_to_fasta)
+6 of 26 steps (23%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Tue Sep 30 15:48:43 2025]
+rule derep_fulllength:
+    input: ../../mergedReads/nAB_Clu1_merged.fasta
+    output: ../../vsearch/nAB_Clu1_derep.fasta
+    jobid: 53
+    reason: Missing output files: ../../vsearch/nAB_Clu1_derep.fasta; Input files updated by another job: ../../mergedReads/nAB_Clu1_merged.fasta
+    wildcards: sample=nAB_Clu1
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=2169, disk_mib=2069, tmpdir=<TBD>, ntasks=1, threads=1, runtime=20, cpus_per_task=8
+Job 53 has been submitted with SLURM jobid 26219430 (log: /tgen_labs/jfryer/kolney/nanobody/scripts/01_processing/.snakemake/slurm_logs/rule_derep_fulllength/nAB_Clu1/26219430.log).
+[Tue Sep 30 15:48:43 2025]
+Finished jobid: 45 (Rule: convert_to_fasta)
+7 of 26 steps (27%) done
+[Tue Sep 30 15:48:43 2025]
+Finished jobid: 49 (Rule: derep_fulllength)
+8 of 26 steps (31%) done
+[Tue Sep 30 15:48:43 2025]
+Finished jobid: 38 (Rule: convert_to_fasta)
+9 of 26 steps (35%) done
+[Tue Sep 30 15:48:43 2025]
+Finished jobid: 51 (Rule: derep_fulllength)
+10 of 26 steps (38%) done
+[Tue Sep 30 15:48:43 2025]
+Finished jobid: 50 (Rule: derep_fulllength)
+11 of 26 steps (42%) done
+[Tue Sep 30 15:48:43 2025]
+Finished jobid: 52 (Rule: derep_fulllength)
+12 of 26 steps (46%) done
+[Tue Sep 30 15:48:43 2025]
+Finished jobid: 48 (Rule: derep_fulllength)
+13 of 26 steps (50%) done
+Select jobs to execute...
+Execute 7 jobs...
+[Tue Sep 30 15:48:43 2025]
+rule cluster_size:
+    input: ../../vsearch/nAB_ApoE1_derep.fasta
+    output: ../../vsearch/nAB_ApoE1_centroids.fasta, ../../vsearch/nAB_ApoE1_clusters.uc
+    jobid: 59
+    reason: Missing output files: ../../vsearch/nAB_ApoE1_clusters.uc; Input files updated by another job: ../../vsearch/nAB_ApoE1_derep.fasta
+    wildcards: sample=nAB_ApoE1
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=2087, disk_mib=1991, tmpdir=<TBD>, ntasks=1, threads=1, runtime=20, cpus_per_task=8
+Job 59 has been submitted with SLURM jobid 26219431 (log: /tgen_labs/jfryer/kolney/nanobody/scripts/01_processing/.snakemake/slurm_logs/rule_cluster_size/nAB_ApoE1/26219431.log).
+[Tue Sep 30 15:48:43 2025]
+rule cluster_size:
+    input: ../../vsearch/nAB_ApoE3_derep.fasta
+    output: ../../vsearch/nAB_ApoE3_centroids.fasta, ../../vsearch/nAB_ApoE3_clusters.uc
+    jobid: 61
+    reason: Missing output files: ../../vsearch/nAB_ApoE3_clusters.uc; Input files updated by another job: ../../vsearch/nAB_ApoE3_derep.fasta
+    wildcards: sample=nAB_ApoE3
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=1000, disk_mib=954, tmpdir=<TBD>, ntasks=1, threads=1, runtime=20, cpus_per_task=8
+Job 61 has been submitted with SLURM jobid 26219432 (log: /tgen_labs/jfryer/kolney/nanobody/scripts/01_processing/.snakemake/slurm_logs/rule_cluster_size/nAB_ApoE3/26219432.log).
+[Tue Sep 30 15:48:43 2025]
+rule derep_fulllength:
+    input: ../../mergedReads/nAB_Clu2_merged.fasta
+    output: ../../vsearch/nAB_Clu2_derep.fasta
+    jobid: 54
+    reason: Missing output files: ../../vsearch/nAB_Clu2_derep.fasta; Input files updated by another job: ../../mergedReads/nAB_Clu2_merged.fasta
+    wildcards: sample=nAB_Clu2
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=2371, disk_mib=2262, tmpdir=<TBD>, ntasks=1, threads=1, runtime=20, cpus_per_task=8
+Job 54 has been submitted with SLURM jobid 26219433 (log: /tgen_labs/jfryer/kolney/nanobody/scripts/01_processing/.snakemake/slurm_logs/rule_derep_fulllength/nAB_Clu2/26219433.log).
+[Tue Sep 30 15:48:43 2025]
+rule cluster_size:
+    input: ../../vsearch/nAB_Abeta4_derep.fasta
+    output: ../../vsearch/nAB_Abeta4_centroids.fasta, ../../vsearch/nAB_Abeta4_clusters.uc
+    jobid: 58
+    reason: Missing output files: ../../vsearch/nAB_Abeta4_clusters.uc; Input files updated by another job: ../../vsearch/nAB_Abeta4_derep.fasta
+    wildcards: sample=nAB_Abeta4
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=1247, disk_mib=1190, tmpdir=<TBD>, ntasks=1, threads=1, runtime=20, cpus_per_task=8
+Job 58 has been submitted with SLURM jobid 26219434 (log: /tgen_labs/jfryer/kolney/nanobody/scripts/01_processing/.snakemake/slurm_logs/rule_cluster_size/nAB_Abeta4/26219434.log).
+[Tue Sep 30 15:48:44 2025]
+rule cluster_size:
+    input: ../../vsearch/nAB_ApoE2_derep.fasta
+    output: ../../vsearch/nAB_ApoE2_centroids.fasta, ../../vsearch/nAB_ApoE2_clusters.uc
+    jobid: 60
+    reason: Missing output files: ../../vsearch/nAB_ApoE2_clusters.uc; Input files updated by another job: ../../vsearch/nAB_ApoE2_derep.fasta
+    wildcards: sample=nAB_ApoE2
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=1259, disk_mib=1201, tmpdir=<TBD>, ntasks=1, threads=1, runtime=20, cpus_per_task=8
+Job 60 has been submitted with SLURM jobid 26219435 (log: /tgen_labs/jfryer/kolney/nanobody/scripts/01_processing/.snakemake/slurm_logs/rule_cluster_size/nAB_ApoE2/26219435.log).
+[Tue Sep 30 15:48:44 2025]
+rule derep_fulllength:
+    input: ../../mergedReads/nAB_Abeta2_merged.fasta
+    output: ../../vsearch/nAB_Abeta2_derep.fasta
+    jobid: 47
+    reason: Missing output files: ../../vsearch/nAB_Abeta2_derep.fasta; Input files updated by another job: ../../mergedReads/nAB_Abeta2_merged.fasta
+    wildcards: sample=nAB_Abeta2
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=2501, disk_mib=2386, tmpdir=<TBD>, ntasks=1, threads=1, runtime=20, cpus_per_task=8
+Job 47 has been submitted with SLURM jobid 26219436 (log: /tgen_labs/jfryer/kolney/nanobody/scripts/01_processing/.snakemake/slurm_logs/rule_derep_fulllength/nAB_Abeta2/26219436.log).
+[Tue Sep 30 15:48:44 2025]
+rule cluster_size:
+    input: ../../vsearch/nAB_Abeta3_derep.fasta
+    output: ../../vsearch/nAB_Abeta3_centroids.fasta, ../../vsearch/nAB_Abeta3_clusters.uc
+    jobid: 57
+    reason: Missing output files: ../../vsearch/nAB_Abeta3_clusters.uc; Input files updated by another job: ../../vsearch/nAB_Abeta3_derep.fasta
+    wildcards: sample=nAB_Abeta3
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=1008, disk_mib=962, tmpdir=<TBD>, ntasks=1, threads=1, runtime=20, cpus_per_task=8
+Job 57 has been submitted with SLURM jobid 26219437 (log: /tgen_labs/jfryer/kolney/nanobody/scripts/01_processing/.snakemake/slurm_logs/rule_cluster_size/nAB_Abeta3/26219437.log).
+[Tue Sep 30 15:49:23 2025]
+Finished jobid: 53 (Rule: derep_fulllength)
+14 of 26 steps (54%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Tue Sep 30 15:49:23 2025]
+rule cluster_size:
+    input: ../../vsearch/nAB_Clu1_derep.fasta
+    output: ../../vsearch/nAB_Clu1_centroids.fasta, ../../vsearch/nAB_Clu1_clusters.uc
+    jobid: 62
+    reason: Missing output files: ../../vsearch/nAB_Clu1_clusters.uc; Input files updated by another job: ../../vsearch/nAB_Clu1_derep.fasta
+    wildcards: sample=nAB_Clu1
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=1369, disk_mib=1306, tmpdir=<TBD>, ntasks=1, threads=1, runtime=20, cpus_per_task=8
+Job 62 has been submitted with SLURM jobid 26219460 (log: /tgen_labs/jfryer/kolney/nanobody/scripts/01_processing/.snakemake/slurm_logs/rule_cluster_size/nAB_Clu1/26219460.log).
+[Tue Sep 30 15:49:23 2025]
+Finished jobid: 54 (Rule: derep_fulllength)
+15 of 26 steps (58%) done
+[Tue Sep 30 15:49:23 2025]
+Finished jobid: 47 (Rule: derep_fulllength)
+16 of 26 steps (62%) done
+Select jobs to execute...
+Execute 2 jobs...
+[Tue Sep 30 15:49:23 2025]
+rule cluster_size:
+    input: ../../vsearch/nAB_Clu2_derep.fasta
+    output: ../../vsearch/nAB_Clu2_centroids.fasta, ../../vsearch/nAB_Clu2_clusters.uc
+    jobid: 63
+    reason: Missing output files: ../../vsearch/nAB_Clu2_clusters.uc; Input files updated by another job: ../../vsearch/nAB_Clu2_derep.fasta
+    wildcards: sample=nAB_Clu2
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=1000, disk_mib=954, tmpdir=<TBD>, ntasks=1, threads=1, runtime=20, cpus_per_task=8
+Job 63 has been submitted with SLURM jobid 26219462 (log: /tgen_labs/jfryer/kolney/nanobody/scripts/01_processing/.snakemake/slurm_logs/rule_cluster_size/nAB_Clu2/26219462.log).
+[Tue Sep 30 15:49:23 2025]
+rule cluster_size:
+    input: ../../vsearch/nAB_Abeta2_derep.fasta
+    output: ../../vsearch/nAB_Abeta2_centroids.fasta, ../../vsearch/nAB_Abeta2_clusters.uc
+    jobid: 56
+    reason: Missing output files: ../../vsearch/nAB_Abeta2_clusters.uc; Input files updated by another job: ../../vsearch/nAB_Abeta2_derep.fasta
+    wildcards: sample=nAB_Abeta2
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=1772, disk_mib=1690, tmpdir=<TBD>, ntasks=1, threads=1, runtime=20, cpus_per_task=8
+Job 56 has been submitted with SLURM jobid 26219463 (log: /tgen_labs/jfryer/kolney/nanobody/scripts/01_processing/.snakemake/slurm_logs/rule_cluster_size/nAB_Abeta2/26219463.log).
+[Tue Sep 30 15:51:53 2025]
+Finished jobid: 61 (Rule: cluster_size)
+17 of 26 steps (65%) done
+[Tue Sep 30 15:51:53 2025]
+Finished jobid: 63 (Rule: cluster_size)
+18 of 26 steps (69%) done
+[Tue Sep 30 15:52:33 2025]
+Finished jobid: 60 (Rule: cluster_size)
+19 of 26 steps (73%) done
+[Tue Sep 30 15:52:33 2025]
+Finished jobid: 57 (Rule: cluster_size)
+20 of 26 steps (77%) done
+[Tue Sep 30 15:53:13 2025]
+Finished jobid: 58 (Rule: cluster_size)
+21 of 26 steps (81%) done
+[Tue Sep 30 15:53:53 2025]
+Finished jobid: 62 (Rule: cluster_size)
+22 of 26 steps (85%) done
+[Tue Sep 30 15:57:34 2025]
+Finished jobid: 56 (Rule: cluster_size)
+23 of 26 steps (88%) done
+[Tue Sep 30 16:04:04 2025]
+Finished jobid: 59 (Rule: cluster_size)
+24 of 26 steps (92%) done
+[Tue Sep 30 16:04:44 2025]
+Finished jobid: 55 (Rule: cluster_size)
+25 of 26 steps (96%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Tue Sep 30 16:04:44 2025]
+localrule all:
+    input: ../../rawQC/nAB_Abeta1_fq1_fastqc.html, ../../rawQC/nAB_Abeta2_fq1_fastqc.html, ../../rawQC/nAB_Abeta3_fq1_fastqc.html, ../../rawQC/nAB_Abeta4_fq1_fastqc.html, ../../rawQC/nAB_ApoE1_fq1_fastqc.html, ../../rawQC/nAB_ApoE2_fq1_fastqc.html, ../../rawQC/nAB_ApoE3_fq1_fastqc.html, ../../rawQC/nAB_Clu1_fq1_fastqc.html, ../../rawQC/nAB_Clu2_fq1_fastqc.html, ../../rawQC/nAB_Abeta1_fq2_fastqc.html, ../../rawQC/nAB_Abeta2_fq2_fastqc.html, ../../rawQC/nAB_Abeta3_fq2_fastqc.html, ../../rawQC/nAB_Abeta4_fq2_fastqc.html, ../../rawQC/nAB_ApoE1_fq2_fastqc.html, ../../rawQC/nAB_ApoE2_fq2_fastqc.html, ../../rawQC/nAB_ApoE3_fq2_fastqc.html, ../../rawQC/nAB_Clu1_fq2_fastqc.html, ../../rawQC/nAB_Clu2_fq2_fastqc.html, ../../trimmedReads/nAB_Abeta1_trimmed_R1.fastq.gz, ../../trimmedReads/nAB_Abeta2_trimmed_R1.fastq.gz, ../../trimmedReads/nAB_Abeta3_trimmed_R1.fastq.gz, ../../trimmedReads/nAB_Abeta4_trimmed_R1.fastq.gz, ../../trimmedReads/nAB_ApoE1_trimmed_R1.fastq.gz, ../../trimmedReads/nAB_ApoE2_trimmed_R1.fastq.gz, ../../trimmedReads/nAB_ApoE3_trimmed_R1.fastq.gz, ../../trimmedReads/nAB_Clu1_trimmed_R1.fastq.gz, ../../trimmedReads/nAB_Clu2_trimmed_R1.fastq.gz, ../../trimmedReads/nAB_Abeta1_trimmed_R2.fastq.gz, ../../trimmedReads/nAB_Abeta2_trimmed_R2.fastq.gz, ../../trimmedReads/nAB_Abeta3_trimmed_R2.fastq.gz, ../../trimmedReads/nAB_Abeta4_trimmed_R2.fastq.gz, ../../trimmedReads/nAB_ApoE1_trimmed_R2.fastq.gz, ../../trimmedReads/nAB_ApoE2_trimmed_R2.fastq.gz, ../../trimmedReads/nAB_ApoE3_trimmed_R2.fastq.gz, ../../trimmedReads/nAB_Clu1_trimmed_R2.fastq.gz, ../../trimmedReads/nAB_Clu2_trimmed_R2.fastq.gz, ../../mergedReads/nAB_Abeta1_merged.fastq, ../../mergedReads/nAB_Abeta2_merged.fastq, ../../mergedReads/nAB_Abeta3_merged.fastq, ../../mergedReads/nAB_Abeta4_merged.fastq, ../../mergedReads/nAB_ApoE1_merged.fastq, ../../mergedReads/nAB_ApoE2_merged.fastq, ../../mergedReads/nAB_ApoE3_merged.fastq, ../../mergedReads/nAB_Clu1_merged.fastq, ../../mergedReads/nAB_Clu2_merged.fastq, ../../trimmedMergedQC/nAB_Abeta1_trimmedMerged_fastqc.html, ../../trimmedMergedQC/nAB_Abeta2_trimmedMerged_fastqc.html, ../../trimmedMergedQC/nAB_Abeta3_trimmedMerged_fastqc.html, ../../trimmedMergedQC/nAB_Abeta4_trimmedMerged_fastqc.html, ../../trimmedMergedQC/nAB_ApoE1_trimmedMerged_fastqc.html, ../../trimmedMergedQC/nAB_ApoE2_trimmedMerged_fastqc.html, ../../trimmedMergedQC/nAB_ApoE3_trimmedMerged_fastqc.html, ../../trimmedMergedQC/nAB_Clu1_trimmedMerged_fastqc.html, ../../trimmedMergedQC/nAB_Clu2_trimmedMerged_fastqc.html, ../../mergedReads/nAB_Abeta1_merged.fasta, ../../mergedReads/nAB_Abeta2_merged.fasta, ../../mergedReads/nAB_Abeta3_merged.fasta, ../../mergedReads/nAB_Abeta4_merged.fasta, ../../mergedReads/nAB_ApoE1_merged.fasta, ../../mergedReads/nAB_ApoE2_merged.fasta, ../../mergedReads/nAB_ApoE3_merged.fasta, ../../mergedReads/nAB_Clu1_merged.fasta, ../../mergedReads/nAB_Clu2_merged.fasta, ../../vsearch/nAB_Abeta1_derep.fasta, ../../vsearch/nAB_Abeta2_derep.fasta, ../../vsearch/nAB_Abeta3_derep.fasta, ../../vsearch/nAB_Abeta4_derep.fasta, ../../vsearch/nAB_ApoE1_derep.fasta, ../../vsearch/nAB_ApoE2_derep.fasta, ../../vsearch/nAB_ApoE3_derep.fasta, ../../vsearch/nAB_Clu1_derep.fasta, ../../vsearch/nAB_Clu2_derep.fasta, ../../vsearch/nAB_Abeta1_clusters.uc, ../../vsearch/nAB_Abeta2_clusters.uc, ../../vsearch/nAB_Abeta3_clusters.uc, ../../vsearch/nAB_Abeta4_clusters.uc, ../../vsearch/nAB_ApoE1_clusters.uc, ../../vsearch/nAB_ApoE2_clusters.uc, ../../vsearch/nAB_ApoE3_clusters.uc, ../../vsearch/nAB_Clu1_clusters.uc, ../../vsearch/nAB_Clu2_clusters.uc
+    jobid: 0
+    reason: Input files updated by another job: ../../vsearch/nAB_Abeta3_derep.fasta, ../../vsearch/nAB_Abeta3_clusters.uc, ../../vsearch/nAB_ApoE1_clusters.uc, ../../mergedReads/nAB_Abeta3_merged.fasta, ../../vsearch/nAB_ApoE1_derep.fasta, ../../mergedReads/nAB_ApoE1_merged.fasta, ../../vsearch/nAB_ApoE2_clusters.uc, ../../vsearch/nAB_Clu2_clusters.uc, ../../mergedReads/nAB_Clu2_merged.fasta, ../../vsearch/nAB_ApoE3_clusters.uc, ../../vsearch/nAB_Abeta2_derep.fasta, ../../vsearch/nAB_Clu1_derep.fasta, ../../vsearch/nAB_ApoE2_derep.fasta, ../../vsearch/nAB_ApoE3_derep.fasta, ../../mergedReads/nAB_ApoE2_merged.fasta, ../../vsearch/nAB_Abeta1_clusters.uc, ../../vsearch/nAB_Abeta1_derep.fasta, ../../mergedReads/nAB_Clu1_merged.fasta, ../../vsearch/nAB_Abeta4_derep.fasta, ../../vsearch/nAB_Clu2_derep.fasta, ../../vsearch/nAB_Clu1_clusters.uc, ../../mergedReads/nAB_ApoE3_merged.fasta, ../../vsearch/nAB_Abeta2_clusters.uc, ../../mergedReads/nAB_Abeta2_merged.fasta, ../../vsearch/nAB_Abeta4_clusters.uc
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=79716, disk_mib=76024, tmpdir=/tmp, ntasks=1, threads=1, runtime=20, cpus_per_task=8
+[Tue Sep 30 16:04:44 2025]
+Finished jobid: 0 (Rule: all)
+26 of 26 steps (100%) done
+Complete log(s): /tgen_labs/jfryer/kolney/nanobody/scripts/01_processing/.snakemake/log/2025-09-30T154716.813968.snakemake.log

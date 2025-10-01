@@ -1,0 +1,284 @@
+host: g-c-1-4-20
+Building DAG of jobs...
+You are running snakemake in a SLURM job context. This is not recommended, as it may lead to unexpected behavior. Please run Snakemake directly on the login node.
+SLURM run ID: 97d9c119-7ead-49a8-8deb-5377db0de403
+Using shell: /usr/bin/bash
+Provided remote nodes: 9
+Job stats:
+job           count
+----------  -------
+all               1
+trim_bbduk        9
+total            10
+
+Select jobs to execute...
+Failed to solve scheduling problem with ILP solver, falling back to greedy scheduler. You likely have to fix your ILP solver installation. Error message: PULP_CBC_CMD: Not Available (check permissions on cbc)
+Execute 9 jobs...
+[Tue Sep 30 12:31:20 2025]
+rule trim_bbduk:
+    input: ../../fastq/nAB_ApoE3_1_CL_Whole_C1_WMGAS_A43785_SC2134209-SC3_GTAGCTGTCG_L001_R1_001.fastq.gz, ../../fastq/nAB_ApoE3_1_CL_Whole_C1_WMGAS_A43785_SC2134209-SC3_GTAGCTGTCG_L001_R2_001.fastq.gz
+    output: ../../trimmedReads/nAB_ApoE3_trimmed_R1.fastq.gz, ../../trimmedReads/nAB_ApoE3_trimmed_R2.fastq.gz
+    jobid: 16
+    reason: Missing output files: ../../trimmedReads/nAB_ApoE3_trimmed_R1.fastq.gz, ../../trimmedReads/nAB_ApoE3_trimmed_R2.fastq.gz
+    wildcards: sample=nAB_ApoE3
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=1000, disk_mib=954, tmpdir=<TBD>, ntasks=1, threads=8, runtime=200, cpus_per_task=8, mem_gb=64, walltime=01:30:00
+No SLURM account given, trying to guess.
+Unable to guess SLURM account. Trying to proceed without.
+Job 16 has been submitted with SLURM jobid 26215116 (log: /tgen_labs/jfryer/kolney/nanobody/scripts/01_processing/.snakemake/slurm_logs/rule_trim_bbduk/nAB_ApoE3/26215116.log).
+[Tue Sep 30 12:31:20 2025]
+rule trim_bbduk:
+    input: ../../fastq/nAB_Clu2_1_CL_Whole_C1_WMGAS_A43782_SC2134209-SC3_AAGCCTTAGA_L001_R1_001.fastq.gz, ../../fastq/nAB_Clu2_1_CL_Whole_C1_WMGAS_A43782_SC2134209-SC3_AAGCCTTAGA_L001_R2_001.fastq.gz
+    output: ../../trimmedReads/nAB_Clu2_trimmed_R1.fastq.gz, ../../trimmedReads/nAB_Clu2_trimmed_R2.fastq.gz
+    jobid: 18
+    reason: Missing output files: ../../trimmedReads/nAB_Clu2_trimmed_R1.fastq.gz, ../../trimmedReads/nAB_Clu2_trimmed_R2.fastq.gz
+    wildcards: sample=nAB_Clu2
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=1000, disk_mib=954, tmpdir=<TBD>, ntasks=1, threads=8, runtime=200, cpus_per_task=8, mem_gb=64, walltime=01:30:00
+Job 18 has been submitted with SLURM jobid 26215117 (log: /tgen_labs/jfryer/kolney/nanobody/scripts/01_processing/.snakemake/slurm_logs/rule_trim_bbduk/nAB_Clu2/26215117.log).
+[Tue Sep 30 12:31:20 2025]
+rule trim_bbduk:
+    input: ../../fastq/nAB_Abeta2_1_CL_Whole_C1_WMGAS_A43778_SC2134209-SC3_CTGGCGTATG_L001_R1_001.fastq.gz, ../../fastq/nAB_Abeta2_1_CL_Whole_C1_WMGAS_A43778_SC2134209-SC3_CTGGCGTATG_L001_R2_001.fastq.gz
+    output: ../../trimmedReads/nAB_Abeta2_trimmed_R1.fastq.gz, ../../trimmedReads/nAB_Abeta2_trimmed_R2.fastq.gz
+    jobid: 11
+    reason: Missing output files: ../../trimmedReads/nAB_Abeta2_trimmed_R1.fastq.gz, ../../trimmedReads/nAB_Abeta2_trimmed_R2.fastq.gz
+    wildcards: sample=nAB_Abeta2
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=1000, disk_mib=954, tmpdir=<TBD>, ntasks=1, threads=8, runtime=200, cpus_per_task=8, mem_gb=64, walltime=01:30:00
+Job 11 has been submitted with SLURM jobid 26215118 (log: /tgen_labs/jfryer/kolney/nanobody/scripts/01_processing/.snakemake/slurm_logs/rule_trim_bbduk/nAB_Abeta2/26215118.log).
+[Tue Sep 30 12:31:20 2025]
+rule trim_bbduk:
+    input: ../../fastq/nAB_Abeta4_1_CL_Whole_C1_WMGAS_A43780_SC2134209-SC3_TGTCGAACAA_L001_R1_001.fastq.gz, ../../fastq/nAB_Abeta4_1_CL_Whole_C1_WMGAS_A43780_SC2134209-SC3_TGTCGAACAA_L001_R2_001.fastq.gz
+    output: ../../trimmedReads/nAB_Abeta4_trimmed_R1.fastq.gz, ../../trimmedReads/nAB_Abeta4_trimmed_R2.fastq.gz
+    jobid: 13
+    reason: Missing output files: ../../trimmedReads/nAB_Abeta4_trimmed_R1.fastq.gz, ../../trimmedReads/nAB_Abeta4_trimmed_R2.fastq.gz
+    wildcards: sample=nAB_Abeta4
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=1000, disk_mib=954, tmpdir=<TBD>, ntasks=1, threads=8, runtime=200, cpus_per_task=8, mem_gb=64, walltime=01:30:00
+Job 13 has been submitted with SLURM jobid 26215119 (log: /tgen_labs/jfryer/kolney/nanobody/scripts/01_processing/.snakemake/slurm_logs/rule_trim_bbduk/nAB_Abeta4/26215119.log).
+[Tue Sep 30 12:31:21 2025]
+rule trim_bbduk:
+    input: ../../fastq/nAB_ApoE2_1_CL_Whole_C1_WMGAS_A43784_SC2134209-SC3_AATCACGACC_L001_R1_001.fastq.gz, ../../fastq/nAB_ApoE2_1_CL_Whole_C1_WMGAS_A43784_SC2134209-SC3_AATCACGACC_L001_R2_001.fastq.gz
+    output: ../../trimmedReads/nAB_ApoE2_trimmed_R1.fastq.gz, ../../trimmedReads/nAB_ApoE2_trimmed_R2.fastq.gz
+    jobid: 15
+    reason: Missing output files: ../../trimmedReads/nAB_ApoE2_trimmed_R1.fastq.gz, ../../trimmedReads/nAB_ApoE2_trimmed_R2.fastq.gz
+    wildcards: sample=nAB_ApoE2
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=1000, disk_mib=954, tmpdir=<TBD>, ntasks=1, threads=8, runtime=200, cpus_per_task=8, mem_gb=64, walltime=01:30:00
+Job 15 has been submitted with SLURM jobid 26215120 (log: /tgen_labs/jfryer/kolney/nanobody/scripts/01_processing/.snakemake/slurm_logs/rule_trim_bbduk/nAB_ApoE2/26215120.log).
+[Tue Sep 30 12:31:21 2025]
+rule trim_bbduk:
+    input: ../../fastq/nAB_Clu1_1_CL_Whole_C1_WMGAS_A43781_SC2134209-SC3_GTGGCACGAA_L001_R1_001.fastq.gz, ../../fastq/nAB_Clu1_1_CL_Whole_C1_WMGAS_A43781_SC2134209-SC3_GTGGCACGAA_L001_R2_001.fastq.gz
+    output: ../../trimmedReads/nAB_Clu1_trimmed_R1.fastq.gz, ../../trimmedReads/nAB_Clu1_trimmed_R2.fastq.gz
+    jobid: 17
+    reason: Missing output files: ../../trimmedReads/nAB_Clu1_trimmed_R2.fastq.gz, ../../trimmedReads/nAB_Clu1_trimmed_R1.fastq.gz
+    wildcards: sample=nAB_Clu1
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=1000, disk_mib=954, tmpdir=<TBD>, ntasks=1, threads=8, runtime=200, cpus_per_task=8, mem_gb=64, walltime=01:30:00
+Job 17 has been submitted with SLURM jobid 26215121 (log: /tgen_labs/jfryer/kolney/nanobody/scripts/01_processing/.snakemake/slurm_logs/rule_trim_bbduk/nAB_Clu1/26215121.log).
+[Tue Sep 30 12:31:21 2025]
+rule trim_bbduk:
+    input: ../../fastq/nAB_Abeta1_1_CL_Whole_C1_WMGAS_A43777_SC2134209-SC3_AGAGTATCAG_L001_R1_001.fastq.gz, ../../fastq/nAB_Abeta1_1_CL_Whole_C1_WMGAS_A43777_SC2134209-SC3_AGAGTATCAG_L001_R2_001.fastq.gz
+    output: ../../trimmedReads/nAB_Abeta1_trimmed_R1.fastq.gz, ../../trimmedReads/nAB_Abeta1_trimmed_R2.fastq.gz
+    jobid: 10
+    reason: Missing output files: ../../trimmedReads/nAB_Abeta1_trimmed_R1.fastq.gz, ../../trimmedReads/nAB_Abeta1_trimmed_R2.fastq.gz
+    wildcards: sample=nAB_Abeta1
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=1000, disk_mib=954, tmpdir=<TBD>, ntasks=1, threads=8, runtime=200, cpus_per_task=8, mem_gb=64, walltime=01:30:00
+Job 10 has been submitted with SLURM jobid 26215122 (log: /tgen_labs/jfryer/kolney/nanobody/scripts/01_processing/.snakemake/slurm_logs/rule_trim_bbduk/nAB_Abeta1/26215122.log).
+[Tue Sep 30 12:31:21 2025]
+rule trim_bbduk:
+    input: ../../fastq/nAB_Abeta3_1_CL_Whole_C1_WMGAS_A43779_SC2134209-SC3_GGTCATCTCG_L001_R1_001.fastq.gz, ../../fastq/nAB_Abeta3_1_CL_Whole_C1_WMGAS_A43779_SC2134209-SC3_GGTCATCTCG_L001_R2_001.fastq.gz
+    output: ../../trimmedReads/nAB_Abeta3_trimmed_R1.fastq.gz, ../../trimmedReads/nAB_Abeta3_trimmed_R2.fastq.gz
+    jobid: 12
+    reason: Missing output files: ../../trimmedReads/nAB_Abeta3_trimmed_R1.fastq.gz, ../../trimmedReads/nAB_Abeta3_trimmed_R2.fastq.gz
+    wildcards: sample=nAB_Abeta3
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=1000, disk_mib=954, tmpdir=<TBD>, ntasks=1, threads=8, runtime=200, cpus_per_task=8, mem_gb=64, walltime=01:30:00
+Job 12 has been submitted with SLURM jobid 26215123 (log: /tgen_labs/jfryer/kolney/nanobody/scripts/01_processing/.snakemake/slurm_logs/rule_trim_bbduk/nAB_Abeta3/26215123.log).
+[Tue Sep 30 12:31:21 2025]
+rule trim_bbduk:
+    input: ../../fastq/nAB_ApoE1_1_CL_Whole_C1_WMGAS_A43783_SC2134209-SC3_CGCTAAGGCT_L001_R1_001.fastq.gz, ../../fastq/nAB_ApoE1_1_CL_Whole_C1_WMGAS_A43783_SC2134209-SC3_CGCTAAGGCT_L001_R2_001.fastq.gz
+    output: ../../trimmedReads/nAB_ApoE1_trimmed_R1.fastq.gz, ../../trimmedReads/nAB_ApoE1_trimmed_R2.fastq.gz
+    jobid: 14
+    reason: Missing output files: ../../trimmedReads/nAB_ApoE1_trimmed_R1.fastq.gz, ../../trimmedReads/nAB_ApoE1_trimmed_R2.fastq.gz
+    wildcards: sample=nAB_ApoE1
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=1025, disk_mib=978, tmpdir=<TBD>, ntasks=1, threads=8, runtime=200, cpus_per_task=8, mem_gb=64, walltime=01:30:00
+Job 14 has been submitted with SLURM jobid 26215124 (log: /tgen_labs/jfryer/kolney/nanobody/scripts/01_processing/.snakemake/slurm_logs/rule_trim_bbduk/nAB_ApoE1/26215124.log).
+[Tue Sep 30 12:32:15 2025]
+Error in rule trim_bbduk:
+    message: SLURM-job '26215116' failed, SLURM status is: 'FAILED'. For further error details see the cluster/cloud log and the log files of the involved rule(s).
+    jobid: 16
+    input: ../../fastq/nAB_ApoE3_1_CL_Whole_C1_WMGAS_A43785_SC2134209-SC3_GTAGCTGTCG_L001_R1_001.fastq.gz, ../../fastq/nAB_ApoE3_1_CL_Whole_C1_WMGAS_A43785_SC2134209-SC3_GTAGCTGTCG_L001_R2_001.fastq.gz
+    output: ../../trimmedReads/nAB_ApoE3_trimmed_R1.fastq.gz, ../../trimmedReads/nAB_ApoE3_trimmed_R2.fastq.gz
+    log: /tgen_labs/jfryer/kolney/nanobody/scripts/01_processing/.snakemake/slurm_logs/rule_trim_bbduk/nAB_ApoE3/26215116.log (check log file(s) for error details)
+    shell:
+        bbduk.sh in1=../../fastq/nAB_ApoE3_1_CL_Whole_C1_WMGAS_A43785_SC2134209-SC3_GTAGCTGTCG_L001_R1_001.fastq.gz in2=../../fastq/nAB_ApoE3_1_CL_Whole_C1_WMGAS_A43785_SC2134209-SC3_GTAGCTGTCG_L001_R2_001.fastq.gz out1=../../trimmedReads/nAB_ApoE3_trimmed_R1.fastq.gz out2=../../trimmedReads/nAB_ApoE3_trimmed_R2.fastq.gz ref=/tgen_labs/jfryer/projects/references/adapters.fa literal=GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG
+        (command exited with non-zero exit code)
+    external_jobid: 26215116
+[Tue Sep 30 12:32:15 2025]
+Error in rule trim_bbduk:
+    message: SLURM-job '26215117' failed, SLURM status is: 'FAILED'. For further error details see the cluster/cloud log and the log files of the involved rule(s).
+    jobid: 18
+    input: ../../fastq/nAB_Clu2_1_CL_Whole_C1_WMGAS_A43782_SC2134209-SC3_AAGCCTTAGA_L001_R1_001.fastq.gz, ../../fastq/nAB_Clu2_1_CL_Whole_C1_WMGAS_A43782_SC2134209-SC3_AAGCCTTAGA_L001_R2_001.fastq.gz
+    output: ../../trimmedReads/nAB_Clu2_trimmed_R1.fastq.gz, ../../trimmedReads/nAB_Clu2_trimmed_R2.fastq.gz
+    log: /tgen_labs/jfryer/kolney/nanobody/scripts/01_processing/.snakemake/slurm_logs/rule_trim_bbduk/nAB_Clu2/26215117.log (check log file(s) for error details)
+    shell:
+        bbduk.sh in1=../../fastq/nAB_Clu2_1_CL_Whole_C1_WMGAS_A43782_SC2134209-SC3_AAGCCTTAGA_L001_R1_001.fastq.gz in2=../../fastq/nAB_Clu2_1_CL_Whole_C1_WMGAS_A43782_SC2134209-SC3_AAGCCTTAGA_L001_R2_001.fastq.gz out1=../../trimmedReads/nAB_Clu2_trimmed_R1.fastq.gz out2=../../trimmedReads/nAB_Clu2_trimmed_R2.fastq.gz ref=/tgen_labs/jfryer/projects/references/adapters.fa literal=GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG
+        (command exited with non-zero exit code)
+    external_jobid: 26215117
+[Tue Sep 30 12:32:15 2025]
+Error in rule trim_bbduk:
+    message: SLURM-job '26215118' failed, SLURM status is: 'FAILED'. For further error details see the cluster/cloud log and the log files of the involved rule(s).
+    jobid: 11
+    input: ../../fastq/nAB_Abeta2_1_CL_Whole_C1_WMGAS_A43778_SC2134209-SC3_CTGGCGTATG_L001_R1_001.fastq.gz, ../../fastq/nAB_Abeta2_1_CL_Whole_C1_WMGAS_A43778_SC2134209-SC3_CTGGCGTATG_L001_R2_001.fastq.gz
+    output: ../../trimmedReads/nAB_Abeta2_trimmed_R1.fastq.gz, ../../trimmedReads/nAB_Abeta2_trimmed_R2.fastq.gz
+    log: /tgen_labs/jfryer/kolney/nanobody/scripts/01_processing/.snakemake/slurm_logs/rule_trim_bbduk/nAB_Abeta2/26215118.log (check log file(s) for error details)
+    shell:
+        bbduk.sh in1=../../fastq/nAB_Abeta2_1_CL_Whole_C1_WMGAS_A43778_SC2134209-SC3_CTGGCGTATG_L001_R1_001.fastq.gz in2=../../fastq/nAB_Abeta2_1_CL_Whole_C1_WMGAS_A43778_SC2134209-SC3_CTGGCGTATG_L001_R2_001.fastq.gz out1=../../trimmedReads/nAB_Abeta2_trimmed_R1.fastq.gz out2=../../trimmedReads/nAB_Abeta2_trimmed_R2.fastq.gz ref=/tgen_labs/jfryer/projects/references/adapters.fa literal=GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG
+        (command exited with non-zero exit code)
+    external_jobid: 26215118
+[Tue Sep 30 12:32:15 2025]
+Error in rule trim_bbduk:
+    message: SLURM-job '26215119' failed, SLURM status is: 'FAILED'. For further error details see the cluster/cloud log and the log files of the involved rule(s).
+    jobid: 13
+    input: ../../fastq/nAB_Abeta4_1_CL_Whole_C1_WMGAS_A43780_SC2134209-SC3_TGTCGAACAA_L001_R1_001.fastq.gz, ../../fastq/nAB_Abeta4_1_CL_Whole_C1_WMGAS_A43780_SC2134209-SC3_TGTCGAACAA_L001_R2_001.fastq.gz
+    output: ../../trimmedReads/nAB_Abeta4_trimmed_R1.fastq.gz, ../../trimmedReads/nAB_Abeta4_trimmed_R2.fastq.gz
+    log: /tgen_labs/jfryer/kolney/nanobody/scripts/01_processing/.snakemake/slurm_logs/rule_trim_bbduk/nAB_Abeta4/26215119.log (check log file(s) for error details)
+    shell:
+        bbduk.sh in1=../../fastq/nAB_Abeta4_1_CL_Whole_C1_WMGAS_A43780_SC2134209-SC3_TGTCGAACAA_L001_R1_001.fastq.gz in2=../../fastq/nAB_Abeta4_1_CL_Whole_C1_WMGAS_A43780_SC2134209-SC3_TGTCGAACAA_L001_R2_001.fastq.gz out1=../../trimmedReads/nAB_Abeta4_trimmed_R1.fastq.gz out2=../../trimmedReads/nAB_Abeta4_trimmed_R2.fastq.gz ref=/tgen_labs/jfryer/projects/references/adapters.fa literal=GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG
+        (command exited with non-zero exit code)
+    external_jobid: 26215119
+[Tue Sep 30 12:32:15 2025]
+Error in rule trim_bbduk:
+    message: SLURM-job '26215120' failed, SLURM status is: 'FAILED'. For further error details see the cluster/cloud log and the log files of the involved rule(s).
+    jobid: 15
+    input: ../../fastq/nAB_ApoE2_1_CL_Whole_C1_WMGAS_A43784_SC2134209-SC3_AATCACGACC_L001_R1_001.fastq.gz, ../../fastq/nAB_ApoE2_1_CL_Whole_C1_WMGAS_A43784_SC2134209-SC3_AATCACGACC_L001_R2_001.fastq.gz
+    output: ../../trimmedReads/nAB_ApoE2_trimmed_R1.fastq.gz, ../../trimmedReads/nAB_ApoE2_trimmed_R2.fastq.gz
+    log: /tgen_labs/jfryer/kolney/nanobody/scripts/01_processing/.snakemake/slurm_logs/rule_trim_bbduk/nAB_ApoE2/26215120.log (check log file(s) for error details)
+    shell:
+        bbduk.sh in1=../../fastq/nAB_ApoE2_1_CL_Whole_C1_WMGAS_A43784_SC2134209-SC3_AATCACGACC_L001_R1_001.fastq.gz in2=../../fastq/nAB_ApoE2_1_CL_Whole_C1_WMGAS_A43784_SC2134209-SC3_AATCACGACC_L001_R2_001.fastq.gz out1=../../trimmedReads/nAB_ApoE2_trimmed_R1.fastq.gz out2=../../trimmedReads/nAB_ApoE2_trimmed_R2.fastq.gz ref=/tgen_labs/jfryer/projects/references/adapters.fa literal=GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG
+        (command exited with non-zero exit code)
+    external_jobid: 26215120
+[Tue Sep 30 12:33:25 2025]
+Error in rule trim_bbduk:
+    message: SLURM-job '26215121' failed, SLURM status is: 'FAILED'. For further error details see the cluster/cloud log and the log files of the involved rule(s).
+    jobid: 17
+    input: ../../fastq/nAB_Clu1_1_CL_Whole_C1_WMGAS_A43781_SC2134209-SC3_GTGGCACGAA_L001_R1_001.fastq.gz, ../../fastq/nAB_Clu1_1_CL_Whole_C1_WMGAS_A43781_SC2134209-SC3_GTGGCACGAA_L001_R2_001.fastq.gz
+    output: ../../trimmedReads/nAB_Clu1_trimmed_R1.fastq.gz, ../../trimmedReads/nAB_Clu1_trimmed_R2.fastq.gz
+    log: /tgen_labs/jfryer/kolney/nanobody/scripts/01_processing/.snakemake/slurm_logs/rule_trim_bbduk/nAB_Clu1/26215121.log (check log file(s) for error details)
+    shell:
+        bbduk.sh in1=../../fastq/nAB_Clu1_1_CL_Whole_C1_WMGAS_A43781_SC2134209-SC3_GTGGCACGAA_L001_R1_001.fastq.gz in2=../../fastq/nAB_Clu1_1_CL_Whole_C1_WMGAS_A43781_SC2134209-SC3_GTGGCACGAA_L001_R2_001.fastq.gz out1=../../trimmedReads/nAB_Clu1_trimmed_R1.fastq.gz out2=../../trimmedReads/nAB_Clu1_trimmed_R2.fastq.gz ref=/tgen_labs/jfryer/projects/references/adapters.fa literal=GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG
+        (command exited with non-zero exit code)
+    external_jobid: 26215121
+[Tue Sep 30 12:33:25 2025]
+Error in rule trim_bbduk:
+    message: SLURM-job '26215122' failed, SLURM status is: 'FAILED'. For further error details see the cluster/cloud log and the log files of the involved rule(s).
+    jobid: 10
+    input: ../../fastq/nAB_Abeta1_1_CL_Whole_C1_WMGAS_A43777_SC2134209-SC3_AGAGTATCAG_L001_R1_001.fastq.gz, ../../fastq/nAB_Abeta1_1_CL_Whole_C1_WMGAS_A43777_SC2134209-SC3_AGAGTATCAG_L001_R2_001.fastq.gz
+    output: ../../trimmedReads/nAB_Abeta1_trimmed_R1.fastq.gz, ../../trimmedReads/nAB_Abeta1_trimmed_R2.fastq.gz
+    log: /tgen_labs/jfryer/kolney/nanobody/scripts/01_processing/.snakemake/slurm_logs/rule_trim_bbduk/nAB_Abeta1/26215122.log (check log file(s) for error details)
+    shell:
+        bbduk.sh in1=../../fastq/nAB_Abeta1_1_CL_Whole_C1_WMGAS_A43777_SC2134209-SC3_AGAGTATCAG_L001_R1_001.fastq.gz in2=../../fastq/nAB_Abeta1_1_CL_Whole_C1_WMGAS_A43777_SC2134209-SC3_AGAGTATCAG_L001_R2_001.fastq.gz out1=../../trimmedReads/nAB_Abeta1_trimmed_R1.fastq.gz out2=../../trimmedReads/nAB_Abeta1_trimmed_R2.fastq.gz ref=/tgen_labs/jfryer/projects/references/adapters.fa literal=GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG
+        (command exited with non-zero exit code)
+    external_jobid: 26215122
+[Tue Sep 30 12:33:25 2025]
+Error in rule trim_bbduk:
+    message: SLURM-job '26215123' failed, SLURM status is: 'FAILED'. For further error details see the cluster/cloud log and the log files of the involved rule(s).
+    jobid: 12
+    input: ../../fastq/nAB_Abeta3_1_CL_Whole_C1_WMGAS_A43779_SC2134209-SC3_GGTCATCTCG_L001_R1_001.fastq.gz, ../../fastq/nAB_Abeta3_1_CL_Whole_C1_WMGAS_A43779_SC2134209-SC3_GGTCATCTCG_L001_R2_001.fastq.gz
+    output: ../../trimmedReads/nAB_Abeta3_trimmed_R1.fastq.gz, ../../trimmedReads/nAB_Abeta3_trimmed_R2.fastq.gz
+    log: /tgen_labs/jfryer/kolney/nanobody/scripts/01_processing/.snakemake/slurm_logs/rule_trim_bbduk/nAB_Abeta3/26215123.log (check log file(s) for error details)
+    shell:
+        bbduk.sh in1=../../fastq/nAB_Abeta3_1_CL_Whole_C1_WMGAS_A43779_SC2134209-SC3_GGTCATCTCG_L001_R1_001.fastq.gz in2=../../fastq/nAB_Abeta3_1_CL_Whole_C1_WMGAS_A43779_SC2134209-SC3_GGTCATCTCG_L001_R2_001.fastq.gz out1=../../trimmedReads/nAB_Abeta3_trimmed_R1.fastq.gz out2=../../trimmedReads/nAB_Abeta3_trimmed_R2.fastq.gz ref=/tgen_labs/jfryer/projects/references/adapters.fa literal=GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG
+        (command exited with non-zero exit code)
+    external_jobid: 26215123
+[Tue Sep 30 12:33:25 2025]
+Error in rule trim_bbduk:
+    message: SLURM-job '26215124' failed, SLURM status is: 'FAILED'. For further error details see the cluster/cloud log and the log files of the involved rule(s).
+    jobid: 14
+    input: ../../fastq/nAB_ApoE1_1_CL_Whole_C1_WMGAS_A43783_SC2134209-SC3_CGCTAAGGCT_L001_R1_001.fastq.gz, ../../fastq/nAB_ApoE1_1_CL_Whole_C1_WMGAS_A43783_SC2134209-SC3_CGCTAAGGCT_L001_R2_001.fastq.gz
+    output: ../../trimmedReads/nAB_ApoE1_trimmed_R1.fastq.gz, ../../trimmedReads/nAB_ApoE1_trimmed_R2.fastq.gz
+    log: /tgen_labs/jfryer/kolney/nanobody/scripts/01_processing/.snakemake/slurm_logs/rule_trim_bbduk/nAB_ApoE1/26215124.log (check log file(s) for error details)
+    shell:
+        bbduk.sh in1=../../fastq/nAB_ApoE1_1_CL_Whole_C1_WMGAS_A43783_SC2134209-SC3_CGCTAAGGCT_L001_R1_001.fastq.gz in2=../../fastq/nAB_ApoE1_1_CL_Whole_C1_WMGAS_A43783_SC2134209-SC3_CGCTAAGGCT_L001_R2_001.fastq.gz out1=../../trimmedReads/nAB_ApoE1_trimmed_R1.fastq.gz out2=../../trimmedReads/nAB_ApoE1_trimmed_R2.fastq.gz ref=/tgen_labs/jfryer/projects/references/adapters.fa literal=GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG
+        (command exited with non-zero exit code)
+    external_jobid: 26215124
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look below for error messages
+[Tue Sep 30 12:34:15 2025]
+Error in rule trim_bbduk:
+    message: None
+    jobid: 16
+    input: ../../fastq/nAB_ApoE3_1_CL_Whole_C1_WMGAS_A43785_SC2134209-SC3_GTAGCTGTCG_L001_R1_001.fastq.gz, ../../fastq/nAB_ApoE3_1_CL_Whole_C1_WMGAS_A43785_SC2134209-SC3_GTAGCTGTCG_L001_R2_001.fastq.gz
+    output: ../../trimmedReads/nAB_ApoE3_trimmed_R1.fastq.gz, ../../trimmedReads/nAB_ApoE3_trimmed_R2.fastq.gz
+    shell:
+        bbduk.sh in1=../../fastq/nAB_ApoE3_1_CL_Whole_C1_WMGAS_A43785_SC2134209-SC3_GTAGCTGTCG_L001_R1_001.fastq.gz in2=../../fastq/nAB_ApoE3_1_CL_Whole_C1_WMGAS_A43785_SC2134209-SC3_GTAGCTGTCG_L001_R2_001.fastq.gz out1=../../trimmedReads/nAB_ApoE3_trimmed_R1.fastq.gz out2=../../trimmedReads/nAB_ApoE3_trimmed_R2.fastq.gz ref=/tgen_labs/jfryer/projects/references/adapters.fa literal=GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG
+        (command exited with non-zero exit code)
+[Tue Sep 30 12:34:15 2025]
+Error in rule trim_bbduk:
+    message: None
+    jobid: 18
+    input: ../../fastq/nAB_Clu2_1_CL_Whole_C1_WMGAS_A43782_SC2134209-SC3_AAGCCTTAGA_L001_R1_001.fastq.gz, ../../fastq/nAB_Clu2_1_CL_Whole_C1_WMGAS_A43782_SC2134209-SC3_AAGCCTTAGA_L001_R2_001.fastq.gz
+    output: ../../trimmedReads/nAB_Clu2_trimmed_R1.fastq.gz, ../../trimmedReads/nAB_Clu2_trimmed_R2.fastq.gz
+    shell:
+        bbduk.sh in1=../../fastq/nAB_Clu2_1_CL_Whole_C1_WMGAS_A43782_SC2134209-SC3_AAGCCTTAGA_L001_R1_001.fastq.gz in2=../../fastq/nAB_Clu2_1_CL_Whole_C1_WMGAS_A43782_SC2134209-SC3_AAGCCTTAGA_L001_R2_001.fastq.gz out1=../../trimmedReads/nAB_Clu2_trimmed_R1.fastq.gz out2=../../trimmedReads/nAB_Clu2_trimmed_R2.fastq.gz ref=/tgen_labs/jfryer/projects/references/adapters.fa literal=GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG
+        (command exited with non-zero exit code)
+[Tue Sep 30 12:34:15 2025]
+Error in rule trim_bbduk:
+    message: None
+    jobid: 11
+    input: ../../fastq/nAB_Abeta2_1_CL_Whole_C1_WMGAS_A43778_SC2134209-SC3_CTGGCGTATG_L001_R1_001.fastq.gz, ../../fastq/nAB_Abeta2_1_CL_Whole_C1_WMGAS_A43778_SC2134209-SC3_CTGGCGTATG_L001_R2_001.fastq.gz
+    output: ../../trimmedReads/nAB_Abeta2_trimmed_R1.fastq.gz, ../../trimmedReads/nAB_Abeta2_trimmed_R2.fastq.gz
+    shell:
+        bbduk.sh in1=../../fastq/nAB_Abeta2_1_CL_Whole_C1_WMGAS_A43778_SC2134209-SC3_CTGGCGTATG_L001_R1_001.fastq.gz in2=../../fastq/nAB_Abeta2_1_CL_Whole_C1_WMGAS_A43778_SC2134209-SC3_CTGGCGTATG_L001_R2_001.fastq.gz out1=../../trimmedReads/nAB_Abeta2_trimmed_R1.fastq.gz out2=../../trimmedReads/nAB_Abeta2_trimmed_R2.fastq.gz ref=/tgen_labs/jfryer/projects/references/adapters.fa literal=GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG
+        (command exited with non-zero exit code)
+[Tue Sep 30 12:34:15 2025]
+Error in rule trim_bbduk:
+    message: None
+    jobid: 13
+    input: ../../fastq/nAB_Abeta4_1_CL_Whole_C1_WMGAS_A43780_SC2134209-SC3_TGTCGAACAA_L001_R1_001.fastq.gz, ../../fastq/nAB_Abeta4_1_CL_Whole_C1_WMGAS_A43780_SC2134209-SC3_TGTCGAACAA_L001_R2_001.fastq.gz
+    output: ../../trimmedReads/nAB_Abeta4_trimmed_R1.fastq.gz, ../../trimmedReads/nAB_Abeta4_trimmed_R2.fastq.gz
+    shell:
+        bbduk.sh in1=../../fastq/nAB_Abeta4_1_CL_Whole_C1_WMGAS_A43780_SC2134209-SC3_TGTCGAACAA_L001_R1_001.fastq.gz in2=../../fastq/nAB_Abeta4_1_CL_Whole_C1_WMGAS_A43780_SC2134209-SC3_TGTCGAACAA_L001_R2_001.fastq.gz out1=../../trimmedReads/nAB_Abeta4_trimmed_R1.fastq.gz out2=../../trimmedReads/nAB_Abeta4_trimmed_R2.fastq.gz ref=/tgen_labs/jfryer/projects/references/adapters.fa literal=GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG
+        (command exited with non-zero exit code)
+[Tue Sep 30 12:34:15 2025]
+Error in rule trim_bbduk:
+    message: None
+    jobid: 15
+    input: ../../fastq/nAB_ApoE2_1_CL_Whole_C1_WMGAS_A43784_SC2134209-SC3_AATCACGACC_L001_R1_001.fastq.gz, ../../fastq/nAB_ApoE2_1_CL_Whole_C1_WMGAS_A43784_SC2134209-SC3_AATCACGACC_L001_R2_001.fastq.gz
+    output: ../../trimmedReads/nAB_ApoE2_trimmed_R1.fastq.gz, ../../trimmedReads/nAB_ApoE2_trimmed_R2.fastq.gz
+    shell:
+        bbduk.sh in1=../../fastq/nAB_ApoE2_1_CL_Whole_C1_WMGAS_A43784_SC2134209-SC3_AATCACGACC_L001_R1_001.fastq.gz in2=../../fastq/nAB_ApoE2_1_CL_Whole_C1_WMGAS_A43784_SC2134209-SC3_AATCACGACC_L001_R2_001.fastq.gz out1=../../trimmedReads/nAB_ApoE2_trimmed_R1.fastq.gz out2=../../trimmedReads/nAB_ApoE2_trimmed_R2.fastq.gz ref=/tgen_labs/jfryer/projects/references/adapters.fa literal=GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG
+        (command exited with non-zero exit code)
+[Tue Sep 30 12:34:15 2025]
+Error in rule trim_bbduk:
+    message: None
+    jobid: 17
+    input: ../../fastq/nAB_Clu1_1_CL_Whole_C1_WMGAS_A43781_SC2134209-SC3_GTGGCACGAA_L001_R1_001.fastq.gz, ../../fastq/nAB_Clu1_1_CL_Whole_C1_WMGAS_A43781_SC2134209-SC3_GTGGCACGAA_L001_R2_001.fastq.gz
+    output: ../../trimmedReads/nAB_Clu1_trimmed_R1.fastq.gz, ../../trimmedReads/nAB_Clu1_trimmed_R2.fastq.gz
+    shell:
+        bbduk.sh in1=../../fastq/nAB_Clu1_1_CL_Whole_C1_WMGAS_A43781_SC2134209-SC3_GTGGCACGAA_L001_R1_001.fastq.gz in2=../../fastq/nAB_Clu1_1_CL_Whole_C1_WMGAS_A43781_SC2134209-SC3_GTGGCACGAA_L001_R2_001.fastq.gz out1=../../trimmedReads/nAB_Clu1_trimmed_R1.fastq.gz out2=../../trimmedReads/nAB_Clu1_trimmed_R2.fastq.gz ref=/tgen_labs/jfryer/projects/references/adapters.fa literal=GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG
+        (command exited with non-zero exit code)
+[Tue Sep 30 12:34:15 2025]
+Error in rule trim_bbduk:
+    message: None
+    jobid: 10
+    input: ../../fastq/nAB_Abeta1_1_CL_Whole_C1_WMGAS_A43777_SC2134209-SC3_AGAGTATCAG_L001_R1_001.fastq.gz, ../../fastq/nAB_Abeta1_1_CL_Whole_C1_WMGAS_A43777_SC2134209-SC3_AGAGTATCAG_L001_R2_001.fastq.gz
+    output: ../../trimmedReads/nAB_Abeta1_trimmed_R1.fastq.gz, ../../trimmedReads/nAB_Abeta1_trimmed_R2.fastq.gz
+    shell:
+        bbduk.sh in1=../../fastq/nAB_Abeta1_1_CL_Whole_C1_WMGAS_A43777_SC2134209-SC3_AGAGTATCAG_L001_R1_001.fastq.gz in2=../../fastq/nAB_Abeta1_1_CL_Whole_C1_WMGAS_A43777_SC2134209-SC3_AGAGTATCAG_L001_R2_001.fastq.gz out1=../../trimmedReads/nAB_Abeta1_trimmed_R1.fastq.gz out2=../../trimmedReads/nAB_Abeta1_trimmed_R2.fastq.gz ref=/tgen_labs/jfryer/projects/references/adapters.fa literal=GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG
+        (command exited with non-zero exit code)
+[Tue Sep 30 12:34:15 2025]
+Error in rule trim_bbduk:
+    message: None
+    jobid: 12
+    input: ../../fastq/nAB_Abeta3_1_CL_Whole_C1_WMGAS_A43779_SC2134209-SC3_GGTCATCTCG_L001_R1_001.fastq.gz, ../../fastq/nAB_Abeta3_1_CL_Whole_C1_WMGAS_A43779_SC2134209-SC3_GGTCATCTCG_L001_R2_001.fastq.gz
+    output: ../../trimmedReads/nAB_Abeta3_trimmed_R1.fastq.gz, ../../trimmedReads/nAB_Abeta3_trimmed_R2.fastq.gz
+    shell:
+        bbduk.sh in1=../../fastq/nAB_Abeta3_1_CL_Whole_C1_WMGAS_A43779_SC2134209-SC3_GGTCATCTCG_L001_R1_001.fastq.gz in2=../../fastq/nAB_Abeta3_1_CL_Whole_C1_WMGAS_A43779_SC2134209-SC3_GGTCATCTCG_L001_R2_001.fastq.gz out1=../../trimmedReads/nAB_Abeta3_trimmed_R1.fastq.gz out2=../../trimmedReads/nAB_Abeta3_trimmed_R2.fastq.gz ref=/tgen_labs/jfryer/projects/references/adapters.fa literal=GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG
+        (command exited with non-zero exit code)
+[Tue Sep 30 12:34:15 2025]
+Error in rule trim_bbduk:
+    message: None
+    jobid: 14
+    input: ../../fastq/nAB_ApoE1_1_CL_Whole_C1_WMGAS_A43783_SC2134209-SC3_CGCTAAGGCT_L001_R1_001.fastq.gz, ../../fastq/nAB_ApoE1_1_CL_Whole_C1_WMGAS_A43783_SC2134209-SC3_CGCTAAGGCT_L001_R2_001.fastq.gz
+    output: ../../trimmedReads/nAB_ApoE1_trimmed_R1.fastq.gz, ../../trimmedReads/nAB_ApoE1_trimmed_R2.fastq.gz
+    shell:
+        bbduk.sh in1=../../fastq/nAB_ApoE1_1_CL_Whole_C1_WMGAS_A43783_SC2134209-SC3_CGCTAAGGCT_L001_R1_001.fastq.gz in2=../../fastq/nAB_ApoE1_1_CL_Whole_C1_WMGAS_A43783_SC2134209-SC3_CGCTAAGGCT_L001_R2_001.fastq.gz out1=../../trimmedReads/nAB_ApoE1_trimmed_R1.fastq.gz out2=../../trimmedReads/nAB_ApoE1_trimmed_R2.fastq.gz ref=/tgen_labs/jfryer/projects/references/adapters.fa literal=GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG
+        (command exited with non-zero exit code)
+Complete log(s): /tgen_labs/jfryer/kolney/nanobody/scripts/01_processing/.snakemake/log/2025-09-30T123113.013376.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

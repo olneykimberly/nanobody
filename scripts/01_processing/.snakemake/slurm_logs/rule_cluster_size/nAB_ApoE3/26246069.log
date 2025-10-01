@@ -1,0 +1,39 @@
+host: g-c-1-4-32
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided remote nodes: 1
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Oct  1 13:14:06 2025]
+rule cluster_size:
+    input: ../../vsearch/nAB_ApoE3_derep.fasta
+    output: ../../vsearch/nAB_ApoE3_centroids_100.fasta, ../../vsearch/nAB_ApoE3_clusters_100.uc
+    jobid: 0
+    reason: Forced execution
+    wildcards: sample=nAB_ApoE3
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=1000, disk_mib=954, tmpdir=<TBD>, ntasks=1, threads=1, runtime=1500, cpus_per_task=8
+host: g-c-1-4-32
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 8
+Rules claiming more threads will be scaled down.
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Oct  1 13:14:07 2025]
+localrule cluster_size:
+    input: ../../vsearch/nAB_ApoE3_derep.fasta
+    output: ../../vsearch/nAB_ApoE3_centroids_100.fasta, ../../vsearch/nAB_ApoE3_clusters_100.uc
+    jobid: 0
+    reason: Forced execution
+    wildcards: sample=nAB_ApoE3
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=1000, disk_mib=954, tmpdir=/tmp, ntasks=1, threads=1, runtime=1500, cpus_per_task=8
+vsearch v2.30.0_linux_x86_64, 503.3GB RAM, 48 cores
+https://github.com/torognes/vsearch
+
+Reading file ../../vsearch/nAB_ApoE3_derep.fasta 100%
+366351985 nt in 797083 seqs, min 308, max 605, avg 460
+Masking 100%
+Sorting by abundance 100%
+Counting k-mers 100%

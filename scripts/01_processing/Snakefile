@@ -1,0 +1,192 @@
+import os
+
+configfile: "config.json"
+#Tools
+fastqc_path = "fastqc"
+bbduksh_path = "bbduk.sh"
+multiqc_path = "multiqc"
+picard_path = "picard"
+bamtools_path = "bamtools"
+
+
+rule all:
+        input:
+        	expand(config["rawQC"]+"{sample}_fq1_fastqc.html", sample = config["sample_names"]),
+        	expand(config["rawQC"]+"{sample}_fq2_fastqc.html", sample = config["sample_names"]),
+        
+        	expand(config["trimmedReads"]+"{sample}_trimmed_R1.fastq.gz", sample = config["sample_names"]),
+        	expand(config["trimmedReads"]+"{sample}_trimmed_R2.fastq.gz", sample = config["sample_names"]), 
+        	
+        	expand(config["mergedReads"]+"{sample}_merged.fastq", sample = config["sample_names"]),
+        	expand(config["trimmedMergedQC"]+"{sample}_trimmedMerged_fastqc.html", sample = config["sample_names"]),
+        	expand(config["mergedReads"]+"{sample}_merged.fasta", sample = config["sample_names"]),
+        	expand(config["vsearch"]+"{sample}_derep.fasta", sample = config["sample_names"]),
+        	expand(config["vsearch"]+"{sample}_clusters_100.uc", sample = config["sample_names"]),
+        	expand(config["clustalo"]+"{sample}.aln", sample = config["sample_names"])
+
+#---------------------
+# Reference genome and annotation were downloaded prior to running snakemake. 
+#---------------------
+#rule fastqc on raw:
+#---------------------
+rule raw_fastqc:
+	input:
+		fq1 = lambda wildcards: config[wildcards.sample]["fq_path"] + config[wildcards.sample]["fq1"] + ".fastq.gz",
+		fq2 = lambda wildcards: config[wildcards.sample]["fq_path"] + config[wildcards.sample]["fq2"] + ".fastq.gz"
+	output:
+		fq1_zip =  (config["rawQC"]+"{sample}_fq1_fastqc.zip"),
+		fq1_html = (config["rawQC"]+"{sample}_fq1_fastqc.html"),
+		fq2_zip =  (config["rawQC"]+"{sample}_fq2_fastqc.zip"),
+		fq2_html = (config["rawQC"]+"{sample}_fq2_fastqc.html")
+	params:
+		fastqc = fastqc_path,
+		fastqc_dir = (config["rawQC"]),
+		fq1_prefix = lambda wildcards: config[wildcards.sample]["fq_path"] + config[wildcards.sample]["fq1"],
+		fq2_prefix = lambda wildcards: config[wildcards.sample]["fq_path"] + config[wildcards.sample]["fq2"]
+	resources:
+	  mem_gb=64,
+	  walltime="01:30:00",
+	  threads=8
+	shell:
+		"""
+		{params.fastqc} {input.fq1};
+		{params.fastqc} {input.fq2};
+		mv {params.fq1_prefix}_fastqc.html {output.fq1_html};
+		mv {params.fq1_prefix}_fastqc.zip {output.fq1_zip};
+		mv {params.fq2_prefix}_fastqc.html {output.fq2_html};
+		mv {params.fq2_prefix}_fastqc.zip {output.fq2_zip}
+		"""
+
+#---------------------
+#rule trim fq:
+#---------------------
+rule trim_bbduk:
+	input:
+		fq1_trim = lambda wildcards: config[wildcards.sample]["fq_path"] + config[wildcards.sample]["fq1"] + ".fastq.gz",
+		fq2_trim = lambda wildcards: config[wildcards.sample]["fq_path"] + config[wildcards.sample]["fq2"] + ".fastq.gz"
+	output:
+		out_fq1 = (config["trimmedReads"]+"{sample}_trimmed_R1.fastq.gz"),
+		out_fq2 = (config["trimmedReads"]+"{sample}_trimmed_R2.fastq.gz")
+	params:
+		bbduksh = bbduksh_path
+	resources:
+	  mem_gb=64,
+	  walltime="01:30:00",
+	  threads=8
+	shell:
+		"{params.bbduksh} in1={input.fq1_trim} in2={input.fq2_trim} "
+		"out1={output.out_fq1} out2={output.out_fq2} "
+		"ref=/tgen_labs/jfryer/projects/references/adapters.fa literal=GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG"
+		
+# KEY
+# in1/in2 input paired end fastq files
+# out1/out2 output paired end fastq files
+# ref where adapter fasta is located
+# ktrim=r is for right-trimming (3′ adapters), once a reference kmer is matched in a read, that kmer and all the bases to the right will be trimmed, leaving only the bases to the left
+# ktrim=l is for left-trimming (5′ adapters)
+# k=23 kmer length is 23-mers
+# mink=11 will additionally look for shorter 11-mers at end of read
+# hdist=1 with a small value of mink, it is useful to independently control the hamming/edit distance
+# tpe specifies to trim both reads to the same length
+# tbo specifies to also trim adapters based on pair overlap detection using BBMerge (which does not require known adapter sequences)
+
+#---------------------
+# merge reads
+#---------------------
+rule mergeReads:
+	input:
+		in_fq1 = (config["trimmedReads"]+"{sample}_trimmed_R1.fastq.gz"),
+		in_fq2 = (config["trimmedReads"]+"{sample}_trimmed_R2.fastq.gz")
+	output:
+		out_merge = (config["mergedReads"]+"{sample}_merged.fastq")
+	resources:
+	  mem_gb=64,
+	  walltime="01:30:00",
+	  threads=8
+	shell:
+		"vsearch --fastq_mergepairs {input.in_fq1} --reverse {input.in_fq2} --fastqout {output.out_merge}"
+
+#---------------------
+#rule fastqc on trimmed:
+#---------------------
+rule trim_fastqc:
+	input:
+		fq1_trim = (config["mergedReads"]+"{sample}_merged.fastq")
+	output:
+		fq1_zip =  (config["trimmedMergedQC"]+"{sample}_trimmedMerged_fastqc.zip"),
+		fq1_html = (config["trimmedMergedQC"]+"{sample}_trimmedMerged_fastqc.html")
+	params:
+		fastqc = fastqc_path,
+		fastqc_dir = (config["trimmedMergedQC"]),
+		fq1_prefix = (config["mergedReads"]+"{sample}_merged")
+	resources:
+	  mem_gb=64,
+	  walltime="01:30:00",
+	  threads=8
+	shell:
+		"""
+		{params.fastqc} {input.fq1_trim};
+		mv {params.fq1_prefix}_fastqc.html {output.fq1_html};
+		mv {params.fq1_prefix}_fastqc.zip {output.fq1_zip}
+		"""
+		
+#---------------------
+#rule convert to fasta:
+#---------------------
+rule convert_to_fasta:
+	input:
+		in_fastq = (config["mergedReads"]+"{sample}_merged.fastq")
+	output:
+		out_fasta =  (config["mergedReads"]+"{sample}_merged.fasta")
+	shell:
+		"""
+    seqtk seq -a {input.in_fastq} > {output.out_fasta}
+		"""
+		
+#---------------------
+#rule derep_fulllength:
+# Merge strictly identical sequences
+# Identical sequences are defined as having the same length and the same string of nucleotides. 
+#---------------------
+rule derep_fulllength:
+	input:
+		in_fasta =  (config["mergedReads"]+"{sample}_merged.fasta")
+	output:
+		out_derep =  (config["vsearch"]+"{sample}_derep.fasta")
+	shell:
+		"""
+    vsearch --derep_fulllength {input.in_fasta} --sizeout --output {output.out_derep}
+		"""
+
+#---------------------
+#rule cluster: (De Novo Assembly) 
+# Clusterize the fasta sequences
+# Cluster unique sequences at 95% identity.The most abundant sequence is used as the centroid for its cluster.
+# Adjust '--id 0.95' (95%) based on expected intra-family diversity.
+# Sorts by decreasing abundance (size annotation). 
+#---------------------
+rule cluster_size:
+	input:
+		in_derep =  (config["vsearch"]+"{sample}_derep.fasta")
+	output:
+		out_centroids =  (config["vsearch"]+"{sample}_centroids_100.fasta"),
+		out_clusters =  (config["vsearch"]+"{sample}_clusters_100.uc")
+	shell:
+		"""
+    vsearch --cluster_size {input.in_derep} --id 1.00 --centroids {output.out_centroids} --uc {output.out_clusters}
+		"""
+
+#---------------------
+#rule clustalo
+#---------------------
+rule clustalo:
+	input:
+		in_fasta =  (config["vsearch"]+"{sample}_derep.fasta")
+	output:
+		out_clu =  (config["clustalo"]+"{sample}.aln")
+	shell:
+		"""
+    clustalo -i {input.in_fasta} -o {output.out_clu} --outfmt=clu
+		"""
+#---------------------
+# End of Snakefile. 

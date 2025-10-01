@@ -1,0 +1,31 @@
+host: g-c-1-4-14
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided remote nodes: 1
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Oct  1 09:05:27 2025]
+rule clustalo:
+    input: ../../vsearch/nAB_Abeta1_derep.fasta
+    output: ../../clustalo/nAB_Abeta1.aln
+    jobid: 0
+    reason: Forced execution
+    wildcards: sample=nAB_Abeta1
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=2068, disk_mib=1973, tmpdir=<TBD>, ntasks=1, threads=1, runtime=1500, cpus_per_task=8
+host: g-c-1-4-14
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 8
+Rules claiming more threads will be scaled down.
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Oct  1 09:05:34 2025]
+localrule clustalo:
+    input: ../../vsearch/nAB_Abeta1_derep.fasta
+    output: ../../clustalo/nAB_Abeta1.aln
+    jobid: 0
+    reason: Forced execution
+    wildcards: sample=nAB_Abeta1
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=2068, disk_mib=1973, tmpdir=/tmp, ntasks=1, threads=1, runtime=1500, cpus_per_task=8

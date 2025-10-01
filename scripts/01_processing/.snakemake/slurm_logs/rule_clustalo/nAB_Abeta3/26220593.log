@@ -1,0 +1,36 @@
+host: g-h-1-8-17
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided remote nodes: 1
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Sep 30 16:25:42 2025]
+rule clustalo:
+    input: ../../vsearch/nAB_Abeta3_derep.fasta
+    output: ../../clustalo/nAB_Abeta3.aln
+    jobid: 0
+    reason: Forced execution
+    wildcards: sample=nAB_Abeta3
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=1008, disk_mib=962, tmpdir=<TBD>, ntasks=1, threads=1, runtime=500, cpus_per_task=8
+host: g-h-1-8-17
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 8
+Rules claiming more threads will be scaled down.
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Sep 30 16:25:45 2025]
+localrule clustalo:
+    input: ../../vsearch/nAB_Abeta3_derep.fasta
+    output: ../../clustalo/nAB_Abeta3.aln
+    jobid: 0
+    reason: Forced execution
+    wildcards: sample=nAB_Abeta3
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=1008, disk_mib=962, tmpdir=/tmp, ntasks=1, threads=1, runtime=500, cpus_per_task=8
+slurmstepd: error: *** STEP 26220593.0 ON g-h-1-8-17 CANCELLED AT 2025-10-01T00:45:37 DUE TO TIME LIMIT ***
+slurmstepd: error: *** JOB 26220593 ON g-h-1-8-17 CANCELLED AT 2025-10-01T00:45:37 DUE TO TIME LIMIT ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+Will exit after finishing currently running jobs (scheduler).
+Will exit after finishing currently running jobs (scheduler).

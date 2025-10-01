@@ -1,0 +1,185 @@
+host: g-h-1-8-13
+Building DAG of jobs...
+You are running snakemake in a SLURM job context. This is not recommended, as it may lead to unexpected behavior. Please run Snakemake directly on the login node.
+SLURM run ID: 1db4c105-3e64-4a42-add5-fea7f54821bc
+Using shell: /usr/bin/bash
+Provided remote nodes: 9
+Job stats:
+job             count
+------------  -------
+all                 1
+clustalo            9
+cluster_size        9
+total              19
+
+Select jobs to execute...
+Failed to solve scheduling problem with ILP solver, falling back to greedy scheduler. You likely have to fix your ILP solver installation. Error message: PULP_CBC_CMD: Not Available (check permissions on cbc)
+Execute 9 jobs...
+[Wed Oct  1 09:05:15 2025]
+rule clustalo:
+    input: ../../vsearch/nAB_ApoE2_derep.fasta
+    output: ../../clustalo/nAB_ApoE2.aln
+    jobid: 69
+    reason: Missing output files: ../../clustalo/nAB_ApoE2.aln
+    wildcards: sample=nAB_ApoE2
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=1259, disk_mib=1201, tmpdir=<TBD>, ntasks=1, threads=1, runtime=1500, cpus_per_task=8
+No SLURM account given, trying to guess.
+Unable to guess SLURM account. Trying to proceed without.
+Job 69 has been submitted with SLURM jobid 26240727 (log: /tgen_labs/jfryer/kolney/nanobody/scripts/01_processing/.snakemake/slurm_logs/rule_clustalo/nAB_ApoE2/26240727.log).
+[Wed Oct  1 09:05:15 2025]
+rule clustalo:
+    input: ../../vsearch/nAB_Clu1_derep.fasta
+    output: ../../clustalo/nAB_Clu1.aln
+    jobid: 71
+    reason: Missing output files: ../../clustalo/nAB_Clu1.aln
+    wildcards: sample=nAB_Clu1
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=1369, disk_mib=1306, tmpdir=<TBD>, ntasks=1, threads=1, runtime=1500, cpus_per_task=8
+Job 71 has been submitted with SLURM jobid 26240728 (log: /tgen_labs/jfryer/kolney/nanobody/scripts/01_processing/.snakemake/slurm_logs/rule_clustalo/nAB_Clu1/26240728.log).
+[Wed Oct  1 09:05:15 2025]
+rule cluster_size:
+    input: ../../vsearch/nAB_Abeta2_derep.fasta
+    output: ../../vsearch/nAB_Abeta2_centroids_100.fasta, ../../vsearch/nAB_Abeta2_clusters_100.uc
+    jobid: 56
+    reason: Missing output files: ../../vsearch/nAB_Abeta2_clusters_100.uc
+    wildcards: sample=nAB_Abeta2
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=1772, disk_mib=1690, tmpdir=<TBD>, ntasks=1, threads=1, runtime=1500, cpus_per_task=8
+Job 56 has been submitted with SLURM jobid 26240729 (log: /tgen_labs/jfryer/kolney/nanobody/scripts/01_processing/.snakemake/slurm_logs/rule_cluster_size/nAB_Abeta2/26240729.log).
+[Wed Oct  1 09:05:15 2025]
+rule cluster_size:
+    input: ../../vsearch/nAB_Clu1_derep.fasta
+    output: ../../vsearch/nAB_Clu1_centroids_100.fasta, ../../vsearch/nAB_Clu1_clusters_100.uc
+    jobid: 62
+    reason: Missing output files: ../../vsearch/nAB_Clu1_clusters_100.uc
+    wildcards: sample=nAB_Clu1
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=1369, disk_mib=1306, tmpdir=<TBD>, ntasks=1, threads=1, runtime=1500, cpus_per_task=8
+Job 62 has been submitted with SLURM jobid 26240730 (log: /tgen_labs/jfryer/kolney/nanobody/scripts/01_processing/.snakemake/slurm_logs/rule_cluster_size/nAB_Clu1/26240730.log).
+[Wed Oct  1 09:05:15 2025]
+rule clustalo:
+    input: ../../vsearch/nAB_Abeta1_derep.fasta
+    output: ../../clustalo/nAB_Abeta1.aln
+    jobid: 64
+    reason: Missing output files: ../../clustalo/nAB_Abeta1.aln
+    wildcards: sample=nAB_Abeta1
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=2068, disk_mib=1973, tmpdir=<TBD>, ntasks=1, threads=1, runtime=1500, cpus_per_task=8
+Job 64 has been submitted with SLURM jobid 26240731 (log: /tgen_labs/jfryer/kolney/nanobody/scripts/01_processing/.snakemake/slurm_logs/rule_clustalo/nAB_Abeta1/26240731.log).
+[Wed Oct  1 09:05:16 2025]
+rule clustalo:
+    input: ../../vsearch/nAB_ApoE1_derep.fasta
+    output: ../../clustalo/nAB_ApoE1.aln
+    jobid: 68
+    reason: Missing output files: ../../clustalo/nAB_ApoE1.aln
+    wildcards: sample=nAB_ApoE1
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=2087, disk_mib=1991, tmpdir=<TBD>, ntasks=1, threads=1, runtime=1500, cpus_per_task=8
+Job 68 has been submitted with SLURM jobid 26240732 (log: /tgen_labs/jfryer/kolney/nanobody/scripts/01_processing/.snakemake/slurm_logs/rule_clustalo/nAB_ApoE1/26240732.log).
+[Wed Oct  1 09:05:16 2025]
+rule cluster_size:
+    input: ../../vsearch/nAB_Abeta1_derep.fasta
+    output: ../../vsearch/nAB_Abeta1_centroids_100.fasta, ../../vsearch/nAB_Abeta1_clusters_100.uc
+    jobid: 55
+    reason: Missing output files: ../../vsearch/nAB_Abeta1_clusters_100.uc
+    wildcards: sample=nAB_Abeta1
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=2068, disk_mib=1973, tmpdir=<TBD>, ntasks=1, threads=1, runtime=1500, cpus_per_task=8
+Job 55 has been submitted with SLURM jobid 26240733 (log: /tgen_labs/jfryer/kolney/nanobody/scripts/01_processing/.snakemake/slurm_logs/rule_cluster_size/nAB_Abeta1/26240733.log).
+[Wed Oct  1 09:05:16 2025]
+rule cluster_size:
+    input: ../../vsearch/nAB_ApoE1_derep.fasta
+    output: ../../vsearch/nAB_ApoE1_centroids_100.fasta, ../../vsearch/nAB_ApoE1_clusters_100.uc
+    jobid: 59
+    reason: Missing output files: ../../vsearch/nAB_ApoE1_clusters_100.uc
+    wildcards: sample=nAB_ApoE1
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=2087, disk_mib=1991, tmpdir=<TBD>, ntasks=1, threads=1, runtime=1500, cpus_per_task=8
+Job 59 has been submitted with SLURM jobid 26240734 (log: /tgen_labs/jfryer/kolney/nanobody/scripts/01_processing/.snakemake/slurm_logs/rule_cluster_size/nAB_ApoE1/26240734.log).
+[Wed Oct  1 09:05:16 2025]
+rule clustalo:
+    input: ../../vsearch/nAB_Abeta2_derep.fasta
+    output: ../../clustalo/nAB_Abeta2.aln
+    jobid: 65
+    reason: Missing output files: ../../clustalo/nAB_Abeta2.aln
+    wildcards: sample=nAB_Abeta2
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=1772, disk_mib=1690, tmpdir=<TBD>, ntasks=1, threads=1, runtime=1500, cpus_per_task=8
+Job 65 has been submitted with SLURM jobid 26240735 (log: /tgen_labs/jfryer/kolney/nanobody/scripts/01_processing/.snakemake/slurm_logs/rule_clustalo/nAB_Abeta2/26240735.log).
+Select jobs to execute...
+[Wed Oct  1 10:28:13 2025]
+Finished jobid: 62 (Rule: cluster_size)
+1 of 19 steps (5%) done
+Execute 1 jobs...
+[Wed Oct  1 10:28:13 2025]
+rule cluster_size:
+    input: ../../vsearch/nAB_ApoE2_derep.fasta
+    output: ../../vsearch/nAB_ApoE2_centroids_100.fasta, ../../vsearch/nAB_ApoE2_clusters_100.uc
+    jobid: 60
+    reason: Missing output files: ../../vsearch/nAB_ApoE2_clusters_100.uc
+    wildcards: sample=nAB_ApoE2
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=1259, disk_mib=1201, tmpdir=<TBD>, ntasks=1, threads=1, runtime=1500, cpus_per_task=8
+Job 60 has been submitted with SLURM jobid 26242991 (log: /tgen_labs/jfryer/kolney/nanobody/scripts/01_processing/.snakemake/slurm_logs/rule_cluster_size/nAB_ApoE2/26242991.log).
+Select jobs to execute...
+[Wed Oct  1 11:40:46 2025]
+Finished jobid: 60 (Rule: cluster_size)
+2 of 19 steps (11%) done
+Execute 1 jobs...
+[Wed Oct  1 11:40:46 2025]
+rule cluster_size:
+    input: ../../vsearch/nAB_Abeta4_derep.fasta
+    output: ../../vsearch/nAB_Abeta4_centroids_100.fasta, ../../vsearch/nAB_Abeta4_clusters_100.uc
+    jobid: 58
+    reason: Missing output files: ../../vsearch/nAB_Abeta4_clusters_100.uc
+    wildcards: sample=nAB_Abeta4
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=1247, disk_mib=1190, tmpdir=<TBD>, ntasks=1, threads=1, runtime=1500, cpus_per_task=8
+Job 58 has been submitted with SLURM jobid 26244378 (log: /tgen_labs/jfryer/kolney/nanobody/scripts/01_processing/.snakemake/slurm_logs/rule_cluster_size/nAB_Abeta4/26244378.log).
+Select jobs to execute...
+[Wed Oct  1 12:14:17 2025]
+Finished jobid: 56 (Rule: cluster_size)
+3 of 19 steps (16%) done
+Execute 1 jobs...
+[Wed Oct  1 12:14:17 2025]
+rule clustalo:
+    input: ../../vsearch/nAB_Abeta4_derep.fasta
+    output: ../../clustalo/nAB_Abeta4.aln
+    jobid: 67
+    reason: Missing output files: ../../clustalo/nAB_Abeta4.aln
+    wildcards: sample=nAB_Abeta4
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=1247, disk_mib=1190, tmpdir=<TBD>, ntasks=1, threads=1, runtime=1500, cpus_per_task=8
+Job 67 has been submitted with SLURM jobid 26244829 (log: /tgen_labs/jfryer/kolney/nanobody/scripts/01_processing/.snakemake/slurm_logs/rule_clustalo/nAB_Abeta4/26244829.log).
+Select jobs to execute...
+[Wed Oct  1 12:33:18 2025]
+Finished jobid: 55 (Rule: cluster_size)
+4 of 19 steps (21%) done
+Execute 1 jobs...
+[Wed Oct  1 12:33:18 2025]
+rule clustalo:
+    input: ../../vsearch/nAB_Abeta3_derep.fasta
+    output: ../../clustalo/nAB_Abeta3.aln
+    jobid: 66
+    reason: Missing output files: ../../clustalo/nAB_Abeta3.aln
+    wildcards: sample=nAB_Abeta3
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=1008, disk_mib=962, tmpdir=<TBD>, ntasks=1, threads=1, runtime=1500, cpus_per_task=8
+Job 66 has been submitted with SLURM jobid 26245077 (log: /tgen_labs/jfryer/kolney/nanobody/scripts/01_processing/.snakemake/slurm_logs/rule_clustalo/nAB_Abeta3/26245077.log).
+Select jobs to execute...
+[Wed Oct  1 12:54:59 2025]
+Finished jobid: 58 (Rule: cluster_size)
+5 of 19 steps (26%) done
+Execute 1 jobs...
+[Wed Oct  1 12:54:59 2025]
+rule cluster_size:
+    input: ../../vsearch/nAB_Abeta3_derep.fasta
+    output: ../../vsearch/nAB_Abeta3_centroids_100.fasta, ../../vsearch/nAB_Abeta3_clusters_100.uc
+    jobid: 57
+    reason: Missing output files: ../../vsearch/nAB_Abeta3_clusters_100.uc
+    wildcards: sample=nAB_Abeta3
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=1008, disk_mib=962, tmpdir=<TBD>, ntasks=1, threads=1, runtime=1500, cpus_per_task=8
+Job 57 has been submitted with SLURM jobid 26245699 (log: /tgen_labs/jfryer/kolney/nanobody/scripts/01_processing/.snakemake/slurm_logs/rule_cluster_size/nAB_Abeta3/26245699.log).
+Select jobs to execute...
+[Wed Oct  1 13:14:00 2025]
+Finished jobid: 59 (Rule: cluster_size)
+6 of 19 steps (32%) done
+Execute 1 jobs...
+[Wed Oct  1 13:14:00 2025]
+rule cluster_size:
+    input: ../../vsearch/nAB_ApoE3_derep.fasta
+    output: ../../vsearch/nAB_ApoE3_centroids_100.fasta, ../../vsearch/nAB_ApoE3_clusters_100.uc
+    jobid: 61
+    reason: Missing output files: ../../vsearch/nAB_ApoE3_clusters_100.uc
+    wildcards: sample=nAB_ApoE3
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=1000, disk_mib=954, tmpdir=<TBD>, ntasks=1, threads=1, runtime=1500, cpus_per_task=8
+Job 61 has been submitted with SLURM jobid 26246069 (log: /tgen_labs/jfryer/kolney/nanobody/scripts/01_processing/.snakemake/slurm_logs/rule_cluster_size/nAB_ApoE3/26246069.log).
+Select jobs to execute...

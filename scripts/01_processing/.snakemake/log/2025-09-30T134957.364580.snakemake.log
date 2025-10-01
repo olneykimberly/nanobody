@@ -1,0 +1,138 @@
+host: g-c-1-4-08
+Building DAG of jobs...
+You are running snakemake in a SLURM job context. This is not recommended, as it may lead to unexpected behavior. Please run Snakemake directly on the login node.
+SLURM run ID: ca22a2d2-f3b8-4404-b1ec-f230d5e8f5bc
+Using shell: /usr/bin/bash
+Provided remote nodes: 9
+Job stats:
+job           count
+----------  -------
+all               1
+mergeReads        9
+total            10
+
+Select jobs to execute...
+Failed to solve scheduling problem with ILP solver, falling back to greedy scheduler. You likely have to fix your ILP solver installation. Error message: PULP_CBC_CMD: Not Available (check permissions on cbc)
+Execute 9 jobs...
+[Tue Sep 30 13:50:07 2025]
+rule mergeReads:
+    input: ../../trimmedReads/nAB_Abeta2_trimmed_R1.fastq.gz, ../../trimmedReads/nAB_Abeta2_trimmed_R2.fastq.gz
+    output: ../../mergedReads/nAB_Abeta2_merged.fastq
+    jobid: 20
+    reason: Missing output files: ../../mergedReads/nAB_Abeta2_merged.fastq
+    wildcards: sample=nAB_Abeta2
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=1000, disk_mib=954, tmpdir=<TBD>, ntasks=1, threads=8, runtime=20, cpus_per_task=8, mem_gb=64, walltime=01:30:00
+No SLURM account given, trying to guess.
+Unable to guess SLURM account. Trying to proceed without.
+Job 20 has been submitted with SLURM jobid 26216423 (log: /tgen_labs/jfryer/kolney/nanobody/scripts/01_processing/.snakemake/slurm_logs/rule_mergeReads/nAB_Abeta2/26216423.log).
+[Tue Sep 30 13:50:07 2025]
+rule mergeReads:
+    input: ../../trimmedReads/nAB_Abeta4_trimmed_R1.fastq.gz, ../../trimmedReads/nAB_Abeta4_trimmed_R2.fastq.gz
+    output: ../../mergedReads/nAB_Abeta4_merged.fastq
+    jobid: 22
+    reason: Missing output files: ../../mergedReads/nAB_Abeta4_merged.fastq
+    wildcards: sample=nAB_Abeta4
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=1000, disk_mib=954, tmpdir=<TBD>, ntasks=1, threads=8, runtime=20, cpus_per_task=8, mem_gb=64, walltime=01:30:00
+Job 22 has been submitted with SLURM jobid 26216424 (log: /tgen_labs/jfryer/kolney/nanobody/scripts/01_processing/.snakemake/slurm_logs/rule_mergeReads/nAB_Abeta4/26216424.log).
+[Tue Sep 30 13:50:07 2025]
+rule mergeReads:
+    input: ../../trimmedReads/nAB_ApoE2_trimmed_R1.fastq.gz, ../../trimmedReads/nAB_ApoE2_trimmed_R2.fastq.gz
+    output: ../../mergedReads/nAB_ApoE2_merged.fastq
+    jobid: 24
+    reason: Missing output files: ../../mergedReads/nAB_ApoE2_merged.fastq
+    wildcards: sample=nAB_ApoE2
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=1000, disk_mib=954, tmpdir=<TBD>, ntasks=1, threads=8, runtime=20, cpus_per_task=8, mem_gb=64, walltime=01:30:00
+Job 24 has been submitted with SLURM jobid 26216425 (log: /tgen_labs/jfryer/kolney/nanobody/scripts/01_processing/.snakemake/slurm_logs/rule_mergeReads/nAB_ApoE2/26216425.log).
+[Tue Sep 30 13:50:07 2025]
+rule mergeReads:
+    input: ../../trimmedReads/nAB_Clu1_trimmed_R1.fastq.gz, ../../trimmedReads/nAB_Clu1_trimmed_R2.fastq.gz
+    output: ../../mergedReads/nAB_Clu1_merged.fastq
+    jobid: 26
+    reason: Missing output files: ../../mergedReads/nAB_Clu1_merged.fastq
+    wildcards: sample=nAB_Clu1
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=1000, disk_mib=954, tmpdir=<TBD>, ntasks=1, threads=8, runtime=20, cpus_per_task=8, mem_gb=64, walltime=01:30:00
+Job 26 has been submitted with SLURM jobid 26216426 (log: /tgen_labs/jfryer/kolney/nanobody/scripts/01_processing/.snakemake/slurm_logs/rule_mergeReads/nAB_Clu1/26216426.log).
+[Tue Sep 30 13:50:07 2025]
+rule mergeReads:
+    input: ../../trimmedReads/nAB_Abeta1_trimmed_R1.fastq.gz, ../../trimmedReads/nAB_Abeta1_trimmed_R2.fastq.gz
+    output: ../../mergedReads/nAB_Abeta1_merged.fastq
+    jobid: 19
+    reason: Missing output files: ../../mergedReads/nAB_Abeta1_merged.fastq
+    wildcards: sample=nAB_Abeta1
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=1000, disk_mib=954, tmpdir=<TBD>, ntasks=1, threads=8, runtime=20, cpus_per_task=8, mem_gb=64, walltime=01:30:00
+Job 19 has been submitted with SLURM jobid 26216427 (log: /tgen_labs/jfryer/kolney/nanobody/scripts/01_processing/.snakemake/slurm_logs/rule_mergeReads/nAB_Abeta1/26216427.log).
+[Tue Sep 30 13:50:07 2025]
+rule mergeReads:
+    input: ../../trimmedReads/nAB_Abeta3_trimmed_R1.fastq.gz, ../../trimmedReads/nAB_Abeta3_trimmed_R2.fastq.gz
+    output: ../../mergedReads/nAB_Abeta3_merged.fastq
+    jobid: 21
+    reason: Missing output files: ../../mergedReads/nAB_Abeta3_merged.fastq
+    wildcards: sample=nAB_Abeta3
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=1000, disk_mib=954, tmpdir=<TBD>, ntasks=1, threads=8, runtime=20, cpus_per_task=8, mem_gb=64, walltime=01:30:00
+Job 21 has been submitted with SLURM jobid 26216428 (log: /tgen_labs/jfryer/kolney/nanobody/scripts/01_processing/.snakemake/slurm_logs/rule_mergeReads/nAB_Abeta3/26216428.log).
+[Tue Sep 30 13:50:08 2025]
+rule mergeReads:
+    input: ../../trimmedReads/nAB_ApoE1_trimmed_R1.fastq.gz, ../../trimmedReads/nAB_ApoE1_trimmed_R2.fastq.gz
+    output: ../../mergedReads/nAB_ApoE1_merged.fastq
+    jobid: 23
+    reason: Missing output files: ../../mergedReads/nAB_ApoE1_merged.fastq
+    wildcards: sample=nAB_ApoE1
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=1000, disk_mib=954, tmpdir=<TBD>, ntasks=1, threads=8, runtime=20, cpus_per_task=8, mem_gb=64, walltime=01:30:00
+Job 23 has been submitted with SLURM jobid 26216429 (log: /tgen_labs/jfryer/kolney/nanobody/scripts/01_processing/.snakemake/slurm_logs/rule_mergeReads/nAB_ApoE1/26216429.log).
+[Tue Sep 30 13:50:08 2025]
+rule mergeReads:
+    input: ../../trimmedReads/nAB_ApoE3_trimmed_R1.fastq.gz, ../../trimmedReads/nAB_ApoE3_trimmed_R2.fastq.gz
+    output: ../../mergedReads/nAB_ApoE3_merged.fastq
+    jobid: 25
+    reason: Missing output files: ../../mergedReads/nAB_ApoE3_merged.fastq
+    wildcards: sample=nAB_ApoE3
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=1000, disk_mib=954, tmpdir=<TBD>, ntasks=1, threads=8, runtime=20, cpus_per_task=8, mem_gb=64, walltime=01:30:00
+Job 25 has been submitted with SLURM jobid 26216430 (log: /tgen_labs/jfryer/kolney/nanobody/scripts/01_processing/.snakemake/slurm_logs/rule_mergeReads/nAB_ApoE3/26216430.log).
+[Tue Sep 30 13:50:08 2025]
+rule mergeReads:
+    input: ../../trimmedReads/nAB_Clu2_trimmed_R1.fastq.gz, ../../trimmedReads/nAB_Clu2_trimmed_R2.fastq.gz
+    output: ../../mergedReads/nAB_Clu2_merged.fastq
+    jobid: 27
+    reason: Missing output files: ../../mergedReads/nAB_Clu2_merged.fastq
+    wildcards: sample=nAB_Clu2
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=1000, disk_mib=954, tmpdir=<TBD>, ntasks=1, threads=8, runtime=20, cpus_per_task=8, mem_gb=64, walltime=01:30:00
+Job 27 has been submitted with SLURM jobid 26216431 (log: /tgen_labs/jfryer/kolney/nanobody/scripts/01_processing/.snakemake/slurm_logs/rule_mergeReads/nAB_Clu2/26216431.log).
+[Tue Sep 30 13:51:02 2025]
+Finished jobid: 19 (Rule: mergeReads)
+1 of 10 steps (10%) done
+[Tue Sep 30 13:51:02 2025]
+Finished jobid: 21 (Rule: mergeReads)
+2 of 10 steps (20%) done
+[Tue Sep 30 13:51:42 2025]
+Finished jobid: 20 (Rule: mergeReads)
+3 of 10 steps (30%) done
+[Tue Sep 30 13:51:42 2025]
+Finished jobid: 22 (Rule: mergeReads)
+4 of 10 steps (40%) done
+[Tue Sep 30 13:51:42 2025]
+Finished jobid: 24 (Rule: mergeReads)
+5 of 10 steps (50%) done
+[Tue Sep 30 13:51:42 2025]
+Finished jobid: 26 (Rule: mergeReads)
+6 of 10 steps (60%) done
+[Tue Sep 30 13:51:42 2025]
+Finished jobid: 23 (Rule: mergeReads)
+7 of 10 steps (70%) done
+[Tue Sep 30 13:51:42 2025]
+Finished jobid: 25 (Rule: mergeReads)
+8 of 10 steps (80%) done
+[Tue Sep 30 13:51:42 2025]
+Finished jobid: 27 (Rule: mergeReads)
+9 of 10 steps (90%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Tue Sep 30 13:51:42 2025]
+localrule all:
+    input: ../../rawQC/nAB_Abeta1_fq1_fastqc.html, ../../rawQC/nAB_Abeta2_fq1_fastqc.html, ../../rawQC/nAB_Abeta3_fq1_fastqc.html, ../../rawQC/nAB_Abeta4_fq1_fastqc.html, ../../rawQC/nAB_ApoE1_fq1_fastqc.html, ../../rawQC/nAB_ApoE2_fq1_fastqc.html, ../../rawQC/nAB_ApoE3_fq1_fastqc.html, ../../rawQC/nAB_Clu1_fq1_fastqc.html, ../../rawQC/nAB_Clu2_fq1_fastqc.html, ../../rawQC/nAB_Abeta1_fq2_fastqc.html, ../../rawQC/nAB_Abeta2_fq2_fastqc.html, ../../rawQC/nAB_Abeta3_fq2_fastqc.html, ../../rawQC/nAB_Abeta4_fq2_fastqc.html, ../../rawQC/nAB_ApoE1_fq2_fastqc.html, ../../rawQC/nAB_ApoE2_fq2_fastqc.html, ../../rawQC/nAB_ApoE3_fq2_fastqc.html, ../../rawQC/nAB_Clu1_fq2_fastqc.html, ../../rawQC/nAB_Clu2_fq2_fastqc.html, ../../trimmedReads/nAB_Abeta1_trimmed_R1.fastq.gz, ../../trimmedReads/nAB_Abeta2_trimmed_R1.fastq.gz, ../../trimmedReads/nAB_Abeta3_trimmed_R1.fastq.gz, ../../trimmedReads/nAB_Abeta4_trimmed_R1.fastq.gz, ../../trimmedReads/nAB_ApoE1_trimmed_R1.fastq.gz, ../../trimmedReads/nAB_ApoE2_trimmed_R1.fastq.gz, ../../trimmedReads/nAB_ApoE3_trimmed_R1.fastq.gz, ../../trimmedReads/nAB_Clu1_trimmed_R1.fastq.gz, ../../trimmedReads/nAB_Clu2_trimmed_R1.fastq.gz, ../../trimmedReads/nAB_Abeta1_trimmed_R2.fastq.gz, ../../trimmedReads/nAB_Abeta2_trimmed_R2.fastq.gz, ../../trimmedReads/nAB_Abeta3_trimmed_R2.fastq.gz, ../../trimmedReads/nAB_Abeta4_trimmed_R2.fastq.gz, ../../trimmedReads/nAB_ApoE1_trimmed_R2.fastq.gz, ../../trimmedReads/nAB_ApoE2_trimmed_R2.fastq.gz, ../../trimmedReads/nAB_ApoE3_trimmed_R2.fastq.gz, ../../trimmedReads/nAB_Clu1_trimmed_R2.fastq.gz, ../../trimmedReads/nAB_Clu2_trimmed_R2.fastq.gz, ../../mergedReads/nAB_Abeta1_merged.fastq, ../../mergedReads/nAB_Abeta2_merged.fastq, ../../mergedReads/nAB_Abeta3_merged.fastq, ../../mergedReads/nAB_Abeta4_merged.fastq, ../../mergedReads/nAB_ApoE1_merged.fastq, ../../mergedReads/nAB_ApoE2_merged.fastq, ../../mergedReads/nAB_ApoE3_merged.fastq, ../../mergedReads/nAB_Clu1_merged.fastq, ../../mergedReads/nAB_Clu2_merged.fastq
+    jobid: 0
+    reason: Input files updated by another job: ../../mergedReads/nAB_ApoE2_merged.fastq, ../../mergedReads/nAB_Abeta1_merged.fastq, ../../mergedReads/nAB_Abeta4_merged.fastq, ../../mergedReads/nAB_Clu2_merged.fastq, ../../mergedReads/nAB_Abeta3_merged.fastq, ../../mergedReads/nAB_Clu1_merged.fastq, ../../mergedReads/nAB_Abeta2_merged.fastq, ../../mergedReads/nAB_ApoE1_merged.fastq, ../../mergedReads/nAB_ApoE3_merged.fastq
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=43873, disk_mib=41841, tmpdir=/tmp, ntasks=1, threads=1, runtime=20, cpus_per_task=8
+[Tue Sep 30 13:51:42 2025]
+Finished jobid: 0 (Rule: all)
+10 of 10 steps (100%) done
+Complete log(s): /tgen_labs/jfryer/kolney/nanobody/scripts/01_processing/.snakemake/log/2025-09-30T134957.364580.snakemake.log
